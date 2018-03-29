@@ -1,0 +1,6 @@
+base:
+  dom0:
+    - vms.deb-studium.qvm
+    - vms.deb-studium.use
+  deb-studium:
+    - vms.deb-studium.internal

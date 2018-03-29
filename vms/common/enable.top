@@ -1,0 +1,10 @@
+base:
+  qubes:type:template:
+    - match: pillar
+    - vms.common.urxvt
+  qubes:type:standalone:
+    - match: pillar
+    - vms.common.urxvt
+  qubes:type:app:
+    - match: pillar:
+    
