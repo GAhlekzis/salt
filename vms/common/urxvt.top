@@ -1,4 +1,0 @@
-base:
-  qubes:type:template:
-    - match: pillar
-    - urxvt

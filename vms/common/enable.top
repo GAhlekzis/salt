@@ -5,6 +5,3 @@ base:
   qubes:type:standalone:
     - match: pillar
     - vms.common.urxvt
-  qubes:type:app:
-    - match: pillar:
-    
