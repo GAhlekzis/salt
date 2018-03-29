@@ -10,6 +10,7 @@ misc-packages:
       - redshift-gtk
       - nitrogen
       - rxvt-unicode
+      - htop
 
 uptodate-dom0:
   pkg.uptodate: []
