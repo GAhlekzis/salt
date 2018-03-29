@@ -15,7 +15,7 @@ uptodate-dom0:
   pkg.uptodate: []
 
 
-/home/alj/.config/redshift.conf
+/home/alj/.config/redshift.conf:
   file.managed:
     - user: alj
     - group: alj
