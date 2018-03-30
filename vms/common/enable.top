@@ -5,3 +5,7 @@ base:
   qubes:type:standalone:
     - match: pillar
     - vms.common.urxvt
+    - vms.common.dotfiles
+  qubes:type:apps:
+    - match: pillar
+    - vms.common.dotfiles

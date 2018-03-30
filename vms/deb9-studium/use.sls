@@ -3,4 +3,4 @@ include:
 
 UNI:
   qvm.prefs:
-    - template: deb-studium
+    - template: deb9-studium
