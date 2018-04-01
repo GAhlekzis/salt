@@ -5,8 +5,9 @@ kali-rolling:
   qvm.clone:
     - source: debian-9
 
-kali-rolling:
+kali-rolling-network:
   qvm.prefs:
+    - name: kali-rolling
     - netvm: sys-firewall
     
 dom0:
