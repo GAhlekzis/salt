@@ -28,4 +28,4 @@ uptodate-dom0:
     - user: alj
     - group: alj
     - mode: 644
-    - source: salt://dom/bashrc
+    - source: salt://dom0/bashrc
