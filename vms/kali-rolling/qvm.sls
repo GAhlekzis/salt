@@ -1,6 +1,6 @@
 kali-rolling:
   qvm.clone:
-    - source: debian-8
+    - source: debian-9
 
 dom0:
   cmd.run:
