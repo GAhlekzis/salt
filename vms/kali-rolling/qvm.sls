@@ -4,6 +4,8 @@ include:
 kali-rolling:
   qvm.clone:
     - source: debian-9
+
+kali-rolling:
   qvm.prefs:
     - netvm: sys-firewall
     
