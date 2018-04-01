@@ -4,6 +4,7 @@ kali-rolling:
 
 kali-rolling:
   qvm.prefs:
+    - name: []
     - netvm: sys-firewall
     
 dom0:
