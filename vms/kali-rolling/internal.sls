@@ -5,3 +5,6 @@ kali-rolling-repo:
     - keyid: 7D8D0BF6
     - keyserver: keys.gnupg.net
     - file: /etc/apt/sources.list.d/kali.list
+
+kali-linux-full:
+  pkg.installed: []
