@@ -6,6 +6,8 @@ base:
     - match: pillar
     - vms.common.urxvt
     - vms.common.dotfiles
+    - vms.common.theme
   qubes:type:app:
     - match: pillar
     - vms.common.dotfiles
+    - vms.common.theme
