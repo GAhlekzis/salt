@@ -30,10 +30,9 @@ uptodate-dom0:
     - mode: 644
     - source: salt://dom0/bashrc
 
-
 /home/alj/.emacs:
   file.managed:
     - user: alj
     - group: alj
     - mode: 644
-    - source: salt://vms/common/emacs.conf
+    - source: salt://dom0/emacs.conf
