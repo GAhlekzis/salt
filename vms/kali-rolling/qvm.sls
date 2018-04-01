@@ -3,5 +3,5 @@ kali-rolling:
     - source: debian-9
 
 dom0:
-  cmd.run:
-   - name: qvm-volume extend kali-rolling:root 20G
+  cmd.script:
+    - source: salt://vms/kali-rolling/extend_volume.sh
