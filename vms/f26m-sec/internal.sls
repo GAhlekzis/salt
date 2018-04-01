@@ -9,5 +9,5 @@ packages:
       - qubes-usb-proxy
       - oathtool
       - xclip
-      - qMasterpassword
-      - KeePassX
+      - qmasterpassword
+      - keepassx
