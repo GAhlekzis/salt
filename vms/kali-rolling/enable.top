@@ -1,0 +1,6 @@
+base:
+  dom0:
+    - vms.kali-rolling.qvm
+    - vms.kali-rolling.use
+  kali-rolling:
+    - vms.kali-rolling.internal
