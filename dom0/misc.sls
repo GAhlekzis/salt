@@ -21,4 +21,11 @@ uptodate-dom0:
     - user: alj
     - group: alj
     - mode: 640
-    - source : salt://dom0/redshift.conf
+    - source: salt://dom0/redshift.conf
+
+/home/alj/.bashrc:
+  file.managed:
+    - user: alj
+    - group: alj
+    - mode: 644
+    - source: salt://dom/bashrc
