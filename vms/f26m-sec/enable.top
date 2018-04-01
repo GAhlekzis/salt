@@ -1,0 +1,6 @@
+base:
+  dom0:
+    - vms.f25m-sec.qvm
+    - vms.f25m-sec.use
+  f25m-sec:
+    - vms.f25m-sec.internal
