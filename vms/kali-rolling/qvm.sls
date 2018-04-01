@@ -1,10 +1,13 @@
+include:
+  - qvm.sys-firewall
+
 kali-rolling:
   qvm.clone:
     - source: debian-9
 
 kali-rolling:
   qvm.prefs:
-    - name: []
+    - name: kali-rolling
     - netvm: sys-firewall
     
 dom0:
