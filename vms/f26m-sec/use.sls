@@ -3,12 +3,12 @@ include:
 
 vault:
   qvm.prefs:
-    - template: f25m-sec
+    - template: f26m-sec
     
 vera:
   qvm.prefs:
-    - template: f25m-sec
+    - template: f26m-sec
     
 mfa:
   qvm.prefs:
-    - template: f25m-sec
+    - template: f26m-sec

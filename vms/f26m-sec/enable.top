@@ -1,6 +1,6 @@
 base:
   dom0:
-    - vms.f25m-sec.qvm
-    - vms.f25m-sec.use
-  f25m-sec:
-    - vms.f25m-sec.internal
+    - vms.f26m-sec.qvm
+    - vms.f26m-sec.use
+  f26m-sec:
+    - vms.f26m-sec.internal
