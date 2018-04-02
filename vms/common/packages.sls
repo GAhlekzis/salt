@@ -1,7 +1,7 @@
 vm-common-pkgs:
   pkg.installed:
     - pkgs:
-      - rxvt-unicocde
+      - rxvt-unicode
       - mc
       - adobe-source-code-pro-fonts
       - git
