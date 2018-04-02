@@ -3,5 +3,5 @@ vm-common-pkgs:
     - pkgs:
       - rxvt-unicocde
       - mc
-      - adobe-source-code-pro
+      - adobe-source-code-pro-fonts
       - git
