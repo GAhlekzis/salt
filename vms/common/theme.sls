@@ -4,3 +4,4 @@
     - group: user
     - mode: 664
     - source: salt://vms/common/theme.ini
+    - makedirs: True

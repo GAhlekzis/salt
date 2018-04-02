@@ -1,10 +1,10 @@
 base:
   qubes:type:template:
     - match: pillar
-    - vms.common.urxvt
+    - vms.common.packages
   qubes:type:standalone:
     - match: pillar
-    - vms.common.urxvt
+    - vms.common.packages
     - vms.common.dotfiles
     - vms.common.theme
   qubes:type:app:

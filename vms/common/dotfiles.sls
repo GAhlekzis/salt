@@ -11,6 +11,3 @@
     - group: user
     - mode: 644
     - source: salt://vms/common/emacs.conf
-
-adobe-source-code-pro-fonts:
-  pkg.installed: []
