@@ -4,4 +4,4 @@ deb9-studium:
 
 dom0:
   cmd.script:
-    - source: salt://vms/kali-rolling/extend_volume.sh
+    - source: salt://vms/deb9-studium/extend_volume.sh
