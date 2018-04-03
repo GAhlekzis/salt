@@ -5,3 +5,7 @@ vm-common-pkgs:
       - mc
       - adobe-source-code-pro-fonts
       - git
+      - htop
+      - nautilus
+      - tmux
+      - zsh
