@@ -1,7 +1,7 @@
 #!/bin/bash
 
 run_terminal='
-for t in "$TERMINAL" x-terminal-emulator urxvt rxvt termit terminator Eterm aterm gnome-terminal konsole roxterm xfce4-terminal termite lxterminal mate-terminal terminology st xterm; do
+for t in "$TERMINAL" urxvt x-terminal-emulator rxvt termit terminator Eterm aterm gnome-terminal konsole roxterm xfce4-terminal termite lxterminal mate-terminal terminology st xterm; do
     command -v "$t" > /dev/null 2>&1 && exec "$t";
 done
 '
