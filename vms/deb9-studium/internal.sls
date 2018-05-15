@@ -13,3 +13,5 @@ packages:
       - openjfx
       - file-roller
       - csv2latex
+      - zsh
+      - nautilus

@@ -9,8 +9,10 @@ misc-packages:
       - redshift
       - redshift-gtk
       - nitrogen
-      - rxvt-unicode
+      - rxvt-unicode-256color
       - htop
+      - arandr
+      - emacs
 
 uptodate-dom0:
   pkg.uptodate: []

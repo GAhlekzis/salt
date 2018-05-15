@@ -1,7 +1,7 @@
 vm-common-pkgs:
   pkg.installed:
     - pkgs:
-      - rxvt-unicode
+      - rxvt-unicode-256color
       - mc
       - adobe-source-code-pro-fonts
       - git
@@ -9,3 +9,4 @@ vm-common-pkgs:
       - nautilus
       - tmux
       - zsh
+      - xclip
