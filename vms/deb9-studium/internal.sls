@@ -15,3 +15,4 @@ packages:
       - csv2latex
       - zsh
       - nautilus
+      - xournal
