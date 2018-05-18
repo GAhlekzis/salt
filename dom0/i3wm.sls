@@ -37,3 +37,10 @@ i3-pkgs:
     - group: alj
     - mode: 750
     - source: salt://dom0/i3/qubes_i3status.sh
+
+/home/alj/.i3/rotate.py:
+  file.managed:
+    - user: alj
+    - group: alj
+    - mode: 750
+    - source: salt://dom0/i3/rotate.py

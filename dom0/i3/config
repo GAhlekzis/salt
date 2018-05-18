@@ -256,6 +256,8 @@ exec --no-startup-id ~/.i3/qubes_autostart_xdg.sh
 #Stuff to open on startup: ?
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift-gtk
+exec --no-startup-id ~/.i3/rotate.py
+exec --no-startup-id xinput set-prop 10 "libinput Tapping Enabled (280)" 1
 bindsym $mod+Escape exec i3lock -d -c 000000
 
 #bindsym $mod+F1 exec xrandr --output LVDS1 --primary --auto && xrandr --output VGA1 --off

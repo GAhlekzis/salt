@@ -13,6 +13,10 @@ misc-packages:
       - htop
       - arandr
       - emacs
+      - acpid
+
+acpid:
+  service.running: []
 
 uptodate-dom0:
   pkg.uptodate: []
