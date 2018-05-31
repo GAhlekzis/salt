@@ -9,3 +9,4 @@ vm-common-pkgs:
       - tmux
       - zsh
       - xclip
+      - xournal
