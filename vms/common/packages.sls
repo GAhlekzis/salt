@@ -1,7 +1,6 @@
 vm-common-pkgs:
   pkg.installed:
     - pkgs:
-      - rxvt-unicode-256color
       - mc
       - git
       - htop
@@ -11,3 +10,11 @@ vm-common-pkgs:
       - xclip
       - xournal
       - file
+
+vm-common-st:
+  file.managed:
+    - name: /usr/local/bin/st
+    - user: root
+    - group: root
+    - mode: 755
+    - source: salt://vms/common/st/st
