@@ -3,6 +3,14 @@ i3-pkgs:
     - pkgs:
       - i3
       - i3lock
+      - xautolock
+      - python3
+      - python3-dbus
+      - python3-gi
+      - iio-sensor-proxy
+      - onboard
+      - python3-xlib
+      - python3-docopt
 
 /home/alj/.i3:
   file.directory:
