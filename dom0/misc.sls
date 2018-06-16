@@ -14,6 +14,8 @@ misc-packages:
       - arandr
       - emacs
       - acpid
+      - xautolock
+      - file
 
 acpid:
   service.running: []

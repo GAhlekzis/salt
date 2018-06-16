@@ -15,32 +15,32 @@ i3-pkgs:
     - user: alj
     - group: alj
     - mode: 640
-    - source: salt://dom0/i3/config
+    - source: salt://dom0/i3.d/config
 
 /home/alj/.i3/qubes_term.sh:
   file.managed:
     - user: alj
     - group: alj
     - mode: 750
-    - source: salt://dom0/i3/qubes_term.sh
+    - source: salt://dom0/i3.d/qubes_term.sh
 
 /home/alj/.i3/qubes_autostart_xdg.sh:
   file.managed:
     - user: alj
     - group: alj
     - mode: 750
-    - source: salt://dom0/i3/qubes_autostart_xdg.sh
+    - source: salt://dom0/i3.d/qubes_autostart_xdg.sh
 
 /home/alj/.i3/qubes_i3status.sh:
   file.managed:
     - user: alj
     - group: alj
     - mode: 750
-    - source: salt://dom0/i3/qubes_i3status.sh
+    - source: salt://dom0/i3.d/qubes_i3status.sh
 
 /home/alj/.i3/rotate.py:
   file.managed:
     - user: alj
     - group: alj
     - mode: 750
-    - source: salt://dom0/i3/rotate.py
+    - source: salt://dom0/i3.d/rotate.py

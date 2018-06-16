@@ -10,3 +10,4 @@ vm-common-pkgs:
       - zsh
       - xclip
       - xournal
+      - file

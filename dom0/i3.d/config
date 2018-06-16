@@ -171,11 +171,15 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec 'i3-msg exit'
+bindsym $mod+Shift+e exec i3-msg exit
+
 
 set $Locker i3lock -c 002b36 && sleep 1
 set $Shutdown qvm-shutdown --all && sleep 7 && poweroff
 set $Reboot qvm-shutdown --all && sleep 7 && reboot
+
+# Use a screen locker
+exec --no-startup-id xautolock -detectsleep -time 3 -locker i3lock -c 002b36 -notify 30 -notifier \"notify-send -t 2000 'Locking screen in 30 seconds'\"
 
 set $mode_system System (l) lock, (e) logout, (s) shutdown, (r) reboot
 mode "$mode_system" {
@@ -247,9 +251,6 @@ bar {
 #exec --no-startup-id redshift-gtk
 
 
-# Use a screen locker
-exec --no-startup-id "xautolock -detectsleep -time 3 -locker 'i3lock -d -c 000000' -notify 30 -notifier \"notify-send -t 2000 'Locking screen in 30 seconds'\""
-
 # Make sure all xdg autostart entries are started, this is (among other things)
 # necessary to make sure transient vm's come up
 exec --no-startup-id /home/alj/.i3/qubes_autostart_xdg.sh
@@ -258,26 +259,32 @@ exec --no-startup-id /home/alj/.i3/qubes_autostart_xdg.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift-gtk
 exec --no-startup-id /home/alj/.i3/rotate.py
-exec --no-startup-id xinput set-prop 10 "libinput Tapping Enabled (280)" 1
+exec --no-startup-id xinput set-prop 10 "libinput Tapping Enabled" 1
 bindsym $mod+Escape exec i3lock -d -c 000000
 
 #bindsym $mod+F1 exec xrandr --output LVDS1 --primary --auto && xrandr --output VGA1 --off
-bindsym $mod+F1 exec --no-startup-id sh /home/alj/.screenlayout/1screen.sh
+bindsym $mod+F1 exec --no-startup-id sh /home/alj/.screenlayout/homeScreen.sh
 bindsym $mod+F2 exec --no-startup-id sh /home/alj/.screenlayout/2screens.sh
 bindsym $mod+F3 exec --no-startup-id sh /home/alj/.screenlayout/only2ndScreen.sh
 
 bindsym $mod+F5 exec --no-startup-id nitrogen --restore
 
-workspace 1 output DP-2-2
-workspace 2 output DP-2-2
-workspace 3 output DP-2-2
-workspace 4 output DP-2-2
-workspace 5 output DP-2-2
-workspace 6 output eDP
-workspace 7 output eDP
-workspace 8 output eDP
-workspace 9 output eDP
-workspace 10 output eDP
+# Left Monitor:
+set $MonL eDP
+
+# Right Monitor:
+set $MonR DP-2-2
+
+workspace 1 output $MonL
+workspace 2 output $MonL
+workspace 3 output $MonL
+workspace 4 output $MonL
+workspace 5 output $MonL
+workspace 6 output $MonR
+workspace 7 output $MonR
+workspace 8 output $MonR
+workspace 9 output $MonR
+workspace 10 output $MonR
 
 #What does this do?
 #for_window [class="^.*"] border pixel 1
