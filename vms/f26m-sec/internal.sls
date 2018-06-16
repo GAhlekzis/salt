@@ -11,3 +11,4 @@ packages:
       - xclip
       - qmasterpassword
       - keepassx
+      - bzip2
