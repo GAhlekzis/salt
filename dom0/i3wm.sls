@@ -6,7 +6,6 @@ i3-pkgs:
       - xautolock
       - python3
       - python3-dbus
-      - python3-gi
       - iio-sensor-proxy
       - onboard
       - python3-xlib
