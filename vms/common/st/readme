@@ -1,0 +1,13 @@
+To recompile this puppy:
+    - install on debian:
+      - libx11-dev
+      - libxft-dev
+      - libxext-dev
+    - install on fedora:
+      - libX11-devel
+      - libXft-devel
+
+    - download the latest release from st.suckless.org
+    - copy config.h into there
+    - run `make clean install`
+    - have fun with the compiled binary at /usr/local/bin/
