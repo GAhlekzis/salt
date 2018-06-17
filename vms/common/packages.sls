@@ -38,6 +38,7 @@ st-font-dir:
   file.directory:
     - name: /home/user/.fonts
     - mode: 775
+    - order: 1
 
 st-font:
   file.managed:
@@ -45,4 +46,11 @@ st-font:
     - user: user
     - group: user
     - mode: 775
+    - order: 2
     - source: salt://vms/common/SauceCodePro_Nerd.ttf
+
+
+font-cache:
+  cmd.run:
+    - name: fc-cache -f
+    - order: 3
