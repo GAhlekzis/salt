@@ -34,11 +34,15 @@ purge-old-pkgs:
       - rxvt-unicode
       - adobe-source-code-pro-fonts
 
+st-font-dir:
+  file.directory:
+    - name: /home/user/.fonts
+    - mode: 775
+
 st-font:
   file.managed:
     - name: /home/user/.fonts/SauceCodePro_Nerd.ttf
     - user: user
     - group: user
     - mode: 775
-    - makedirs: True
     - source: salt://vms/common/SauceCodePro_Nerd.ttf

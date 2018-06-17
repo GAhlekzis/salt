@@ -25,10 +25,13 @@
     - source: salt://vms/common/omz.tar
     - enforce_toplevel: False
 
+/home/user/.fonts:
+  file.directory:
+    - mode: 775
+
 /home/user/.fonts/SauceCodePro_Nerd.ttf:
   file.managed:
     - user: user
     - group: user
     - mode: 775
-    - makedirs: True
     - source: salt://vms/common/SauceCodePro_Nerd.ttf
