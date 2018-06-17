@@ -52,4 +52,5 @@ st-font:
 st-font-cache:
   cmd.run:
     - name: fc-cache -f
+    - runas: user
     - order: 3
