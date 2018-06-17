@@ -6,6 +6,7 @@ vm-common-pkgs:
       - htop
       - nautilus
       - tmux
+      - tmuxinator
       - zsh
       - xclip
       - xournal
