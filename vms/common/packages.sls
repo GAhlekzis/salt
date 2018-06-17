@@ -19,6 +19,10 @@ vm-common-st:
     - mode: 755
     - source: salt://vms/common/st/st
 
+user:
+  user.present:
+    - shell: /usr/bin/zsh
+
 purge-old-pkgs:
   pkg.purged:
     - pkgs:

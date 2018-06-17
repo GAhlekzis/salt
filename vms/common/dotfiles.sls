@@ -5,10 +5,6 @@
     - mode: 644
     - source: salt://vms/common/emacs.conf
 
-user:
-  user.present:
-    - shell: /usr/bin/zsh
-
 /home/user/.oh-my-zsh/oh-my-zsh:
   file.absent
 
