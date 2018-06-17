@@ -9,6 +9,9 @@ user:
   user.present:
     - shell: /usr/bin/zsh
 
+/home/user/.oh-my-zsh/oh-my-zsh:
+  file.absent
+
 /home/user/.zshrc:
   file.managed:
     - user: user
