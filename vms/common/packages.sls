@@ -18,3 +18,8 @@ vm-common-st:
     - group: root
     - mode: 755
     - source: salt://vms/common/st/st
+
+purge:
+  pkg.purge:
+    - rxvt-unicode-256color
+    - rxvt-unicode

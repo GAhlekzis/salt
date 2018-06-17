@@ -21,8 +21,14 @@ set-shell-zsh:
   file.recurse:
     - user: user
     - group: user
-    - source: salt:///vms/common/oh-my-zsh
+    - source: salt://vms/common/oh-my-zsh
     - keep_symlinks: True
+
+/home/user/.fonts:
+  file.directory:
+    - user: user
+    - group: user
+    - mode 644
 
 /home/user/.fonts/SauceCodePro_Nerd.ttf:
   file.managed:
