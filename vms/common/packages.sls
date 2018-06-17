@@ -21,5 +21,6 @@ vm-common-st:
 
 purge-old-pkgs:
   pkg.purged:
-    - rxvt-unicode-256color
-    - rxvt-unicode
+    - pkgs:
+      - rxvt-unicode-256color
+      - rxvt-unicode
