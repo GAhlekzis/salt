@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=st
+GenericName=Simple Terminal
+Comment=simple terminal emulator for the X window system
+Exec=st
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=System;TerminalEmulator;
+Keywords=shell;prompt;command;commandline;cmd;
