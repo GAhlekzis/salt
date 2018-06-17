@@ -38,6 +38,6 @@ purge-old-pkgs:
   file.managed:
     - user: user
     - group: user
-    - mode: 644
+    - mode: 775
     - makedirs: True
     - source: salt://vms/common/SauceCodePro_Nerd.ttf
