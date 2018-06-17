@@ -34,8 +34,9 @@ purge-old-pkgs:
       - rxvt-unicode
       - adobe-source-code-pro-fonts
 
-/home/user/.fonts/SauceCodePro_Nerd.ttf:
+st-font:
   file.managed:
+    - name: /home/user/.fonts/SauceCodePro_Nerd.ttf
     - user: user
     - group: user
     - mode: 775
