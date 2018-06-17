@@ -28,7 +28,7 @@ set-shell-zsh:
   file.directory:
     - user: user
     - group: user
-    - mode 644
+    - mode: 644
 
 /home/user/.fonts/SauceCodePro_Nerd.ttf:
   file.managed:
