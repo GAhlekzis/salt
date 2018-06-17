@@ -11,6 +11,8 @@ fi
 # User specific aliases and functions
 alias emacs="emacs -nw"
 alias saltall="sudo qubesctl --show-output --force-color --max-concurrency 1 --all state.highstate"
+alias saltapps="sudo qubesctl --show-output --force-color --max-concurrency 1 --app state.highstate"
+alias salttpl="sudo qubesctl --show-output --force-color --max-concurrency 1 --templates state.highstate"
 
 # Source bash autocompletion
 if [ -f /etc/bash_completion ]; then
