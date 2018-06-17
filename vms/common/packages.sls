@@ -13,7 +13,7 @@ vm-common-pkgs:
 
 vm-common-st:
   file.managed:
-    - name: /usr/local/bin/st
+    - name: /bin/st
     - user: root
     - group: root
     - mode: 755
@@ -24,3 +24,4 @@ purge-old-pkgs:
     - pkgs:
       - rxvt-unicode-256color
       - rxvt-unicode
+      - adobe-source-code-pro-fonts
