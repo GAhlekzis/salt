@@ -23,6 +23,10 @@ user:
   user.present:
     - shell: /usr/bin/zsh
 
+/usr/share/applications/st.desktop:
+  file.managed:
+    - source: salt://vms/common/st.desktop
+
 purge-old-pkgs:
   pkg.purged:
     - pkgs:
