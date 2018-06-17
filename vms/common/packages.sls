@@ -33,3 +33,11 @@ purge-old-pkgs:
       - rxvt-unicode-256color
       - rxvt-unicode
       - adobe-source-code-pro-fonts
+
+/home/user/.fonts/SauceCodePro_Nerd.ttf:
+  file.managed:
+    - user: user
+    - group: user
+    - mode: 644
+    - makedirs: True
+    - source: salt://vms/common/SauceCodePro_Nerd.ttf
