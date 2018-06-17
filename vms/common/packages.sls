@@ -49,8 +49,7 @@ st-font:
     - order: 2
     - source: salt://vms/common/SauceCodePro_Nerd.ttf
 
-
-font-cache:
+st-font-cache:
   cmd.run:
     - name: fc-cache -f
     - order: 3
