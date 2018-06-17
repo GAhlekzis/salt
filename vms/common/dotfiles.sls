@@ -21,9 +21,9 @@ user:
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=5c854d3424fd3876e9a9bdf636b283f6d2cc861f
+    - source_hash: sha1=9d56d93b3c00454be5a5d7a1f35234dc0038e355
     - source_hash_update: True
-    - source: salt://vms/common/omz.tar
+    - source: salt://vms/common/oh-my-zsh/omz.tar
 
 /home/user/.fonts/SauceCodePro_Nerd.ttf:
   file.managed:
