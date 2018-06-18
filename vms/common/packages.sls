@@ -11,6 +11,7 @@ vm-common-pkgs:
       - xclip
       - xournal
       - file
+      - tlp
 
 vm-common-st:
   file.managed:

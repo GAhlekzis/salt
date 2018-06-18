@@ -2,11 +2,13 @@ base:
   qubes:type:template:
     - match: pillar
     - vms.common.packages
+    - vms.common.template_trim
   qubes:type:standalone:
     - match: pillar
     - vms.common.packages
     - vms.common.dotfiles
     - vms.common.theme
+    - vms.common.template_trim
   qubes:type:app:
     - match: pillar
     - vms.common.dotfiles
