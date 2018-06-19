@@ -16,6 +16,7 @@ misc-packages:
       - acpid
       - xautolock
       - file
+      - redhat-lsb
 
 acpid:
   service.running: []
