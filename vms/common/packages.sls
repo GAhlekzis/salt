@@ -13,6 +13,13 @@ vm-common-pkgs:
       - file
       - tlp
 
+new-tmux:
+  pkg.installed:
+    - fromrepo: deb http://ftp.debian.org/debian stretch-backports main
+    - refresh: True
+    - name: tmux
+    - allow_updates: True
+
 vm-common-st:
   file.managed:
     - name: /bin/st
