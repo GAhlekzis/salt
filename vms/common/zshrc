@@ -62,7 +62,6 @@ plugins=(
     sudo
     history
     emacs
-    tmuxinator
 )
 
 source $ZSH/oh-my-zsh.sh
