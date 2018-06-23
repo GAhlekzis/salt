@@ -4,8 +4,8 @@ base:
     - vms.common.font
     - vms.common.template-common
     - vms.common.template-trim
-  'os:Debian':
-    - match: grain
+  'G@os:Debian and not whonix*':
+    - match: compound
     - vms.common.template-debian
   '( I@qubes:type:template and G@os:Fedora ) and not ( ( *minimal or f2*m* ) or ( *25* or dom0 ) )':
     - match: compound
