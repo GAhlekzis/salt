@@ -1,4 +1,4 @@
-vm-common-pkgs:
+vm-debian-pkgs:
   pkg.installed:
     - pkgs:
       - mc
@@ -27,7 +27,7 @@ new-tmux:
     - allow_updates: True
     - version: 2.7*
 
-purge-old-pkgs:
+purge-old-pkgs-debian:
   pkg.purged:
     - pkgs:
       - rxvt-unicode-256color

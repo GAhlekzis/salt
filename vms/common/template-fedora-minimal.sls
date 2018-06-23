@@ -1,4 +1,4 @@
-vm-common-pkgs:
+vm-fedora-minimal-pkgs:
   pkg.installed:
     - pkgs:
       - mc
@@ -11,7 +11,7 @@ vm-common-pkgs:
       - file
       - tlp
 
-purge-old-pkgs:
+purge-old-pkgs-fedora-minimal:
   pkg.purged:
     - pkgs:
       - rxvt-unicode-256color

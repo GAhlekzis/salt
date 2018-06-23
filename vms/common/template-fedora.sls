@@ -1,4 +1,4 @@
-vm-common-pkgs:
+vm-fedora-pkgs:
   pkg.installed:
     - pkgs:
       - mc
@@ -15,7 +15,7 @@ vm-common-pkgs:
       - tlp
       - emacs
 
-purge-old-pkgs:
+purge-old-pkgs-fedora:
   pkg.purged:
     - pkgs:
       - rxvt-unicode-256color
