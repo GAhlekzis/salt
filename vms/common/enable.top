@@ -19,7 +19,7 @@ base:
     - vms.common.template-common
     - vms.common.dotfiles
     - vms.common.theme
-    - vms.common.template-trim
+    - vms.common.standalone-trim
   qubes:type:app:
     - match: pillar
     - vms.common.font
