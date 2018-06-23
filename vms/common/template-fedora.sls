@@ -6,8 +6,8 @@ vm-common-pkgs:
       - htop
       - nautilus
       - tmux
-      - ipython2
-      - ipython3
+      - python3-ipython
+      - python2-ipython
       - zsh
       - xclip
       - xournal
