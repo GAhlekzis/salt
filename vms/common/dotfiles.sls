@@ -25,6 +25,14 @@
     - source: salt://vms/common/omz.tar
     - enforce_toplevel: False
 
+/home/user/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh:
+  file.managed:
+    - source: salt://vms/common/tmux.plugin.zsh
+
+/home/user/.tmux.conf:
+  file.managed:
+    - source: salt://vms/common/tmux.conf
+
 /home/user/.fonts:
   file.directory:
     - mode: 775
