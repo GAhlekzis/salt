@@ -7,10 +7,10 @@ base:
   'os:Debian':
     - match: grain
     - vms.common.template-debian
-  'G@os:Fedora and not (E@*minimal or E@f2*m*)':
+  'G@os:Fedora and not ( E@*minimal or E@f2*m* )':
     - match: compound
     - vms.common.template-fedora
-  'G@os:Fedora and (E@*minimal or E@f2*m*)':
+  'G@os:Fedora and ( E@*minimal or E@f2*m* )':
     - match: compound
     - vms.common.template-fedora-minimal
   qubes:type:standalone:
