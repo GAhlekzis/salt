@@ -1,15 +1,27 @@
 base:
   qubes:type:template:
     - match: pillar
-    - vms.common.packages
-    - vms.common.template_trim
+    - vms.common.font
+    - vms.common.template-common
+    - vms.common.template-trim
+  'os:Debian':
+    - match: grain
+    - vms.common.template-debian
+  'os:Fedora and not (E@*minimal or E@f2*m*)':
+    - match: grain
+    - vms.common.template-fedora
+  'os:Fedora and (E@*minimal or E@f2*m*)':
+    - match: grain
+    - vms.common.template-fedora-minimal
   qubes:type:standalone:
     - match: pillar
-    - vms.common.packages
+    - vms.common.font
+    - vms.common.template-common
     - vms.common.dotfiles
     - vms.common.theme
-    - vms.common.template_trim
+    - vms.common.template-trim
   qubes:type:app:
     - match: pillar
+    - vms.common.font
     - vms.common.dotfiles
     - vms.common.theme
