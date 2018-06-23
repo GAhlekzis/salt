@@ -14,7 +14,7 @@ vm-common-pkgs:
       - tlp
 
 stretch-backports:
-  pkg.repo.managed:
+  pkgrepo.managed:
     - name: deb http://ftp.debian.org/debian stretch-backports main
 
 new-tmux:
