@@ -16,6 +16,7 @@ vm-common-pkgs:
 stretch-backports:
   pkgrepo.managed:
     - name: deb http://ftp.debian.org/debian stretch-backports main
+    - refresh: True
 
 new-tmux:
   pkg.installed:
@@ -23,6 +24,7 @@ new-tmux:
     - refresh: True
     - name: tmux
     - allow_updates: True
+    - version: 2.7*
 
 vm-common-st:
   file.managed:
