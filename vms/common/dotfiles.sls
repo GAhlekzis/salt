@@ -47,10 +47,8 @@
   file.managed:
     - source: salt://vms/common/dotfiles/tmux.plugin.zsh
 
-{% if not salt['file.exists' ]('/home/user/.tmux.conf') %}
 link-tmux-conf:
   file.symlink:
       - name: /home/user/tmux.conf
       - target: /home/user/.tmux/.tmux.conf
       - order: last
-{% endif %}
