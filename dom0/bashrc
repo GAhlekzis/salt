@@ -19,7 +19,7 @@ saltone() {
     sudo qubesctl --show-output --force-color --skip-dom0 --max-concurrency 1 --targets $1 state.highstate
     }
 
-alias pi="ipython3"
+alias pi="ipython3 --no-confirm-exit"
 
 # Source bash autocompletion
 if [ -f /etc/bash_completion ]; then
