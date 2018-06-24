@@ -14,6 +14,7 @@ vm-fedora-pkgs:
       - file
       - tlp
       - emacs
+      - tree
 
 purge-old-pkgs-fedora:
   pkg.purged:

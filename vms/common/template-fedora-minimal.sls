@@ -10,6 +10,7 @@ vm-fedora-minimal-pkgs:
       - xclip
       - file
       - tlp
+      - tree
 
 purge-old-pkgs-fedora-minimal:
   pkg.purged:

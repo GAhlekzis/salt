@@ -13,7 +13,7 @@
   ZSH_THEME="powerlevel9k/powerlevel9k"
   POWERLEVEL9K_MODE='nerdfont-complete'
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history )
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history)
 
 # START TMUX AUTOMATICALLY
   ZSH_TMUX_AUTOSTART='true'
@@ -75,7 +75,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+#################################################################
 # User configuration
+#################################################################
+
+# delete all local branches
+  alias gdl="git branch | grep -v "master" | xargs git branch -D"
+
+# ipython instead of python
+  alias pi="ipython3"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
