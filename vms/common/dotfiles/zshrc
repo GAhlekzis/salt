@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
   alias gdl="git branch | grep -v "master" | xargs git branch -D"
 
 # ipython instead of python
-  alias pi="ipython3"
+  alias pi="ipython3 --no-confirm-exit"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
