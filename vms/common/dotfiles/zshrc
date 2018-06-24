@@ -1,18 +1,24 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# set indent before starting tmux
+  export ZLE_RPROMPT_INDENT=0
+
 # Path to your oh-my-zsh installation.
   export ZSH="/home/user/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='nerdfont-complete'
+  ZSH_THEME="powerlevel9k/powerlevel9k"
+  POWERLEVEL9K_MODE='nerdfont-complete'
 
 # START TMUX AUTOMATICALLY
-ZSH_TMUX_AUTOSTART='true'
-export TERM="st-256color"
+  ZSH_TMUX_AUTOSTART='true'
+  export TERM="st-256color"
+
+# set indent after starting tmux
+  export ZLE_RPROMPT_INDENT=0
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
