@@ -47,10 +47,6 @@
   file.managed:
     - source: salt://vms/common/dotfiles/tmux.plugin.zsh
 
-delete-old-tmux:
-  file.absent:
-    - name: /home/user/.tmux.conf
-
 {% if not salt['file.exists' ]('/home/user/.tmux.conf') %}
 link-tmux-conf:
   file.symlink:
