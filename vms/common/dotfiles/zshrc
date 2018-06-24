@@ -12,7 +12,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 # START TMUX AUTOMATICALLY
 ZSH_TMUX_AUTOSTART='true'
-export TERM="screen-256color"
+export TERM="st-256color"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
