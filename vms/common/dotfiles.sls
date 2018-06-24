@@ -57,4 +57,4 @@ link-tmux-conf:
       - name: /home/user/.tmux/tmux.conf
       - target: /home/user/.tmux.conf
       - order: last
-{% endif %}%
+{% endif %}
