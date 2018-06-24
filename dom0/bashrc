@@ -14,6 +14,13 @@ alias saltall="sudo qubesctl --show-output --force-color --max-concurrency 1 --a
 alias saltapps="sudo qubesctl --show-output --force-color --max-concurrency 1 --app state.highstate"
 alias salttpl="sudo qubesctl --show-output --force-color --max-concurrency 1 --templates state.highstate"
 
+saltone() {
+    # run salt on one specific target
+    sudo qubesctl --show-output --force-color --skip-dom0 --max-concurrency 1 --targets $1 state.highstate
+    }
+
+alias pi="ipython3"
+
 # Source bash autocompletion
 if [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion

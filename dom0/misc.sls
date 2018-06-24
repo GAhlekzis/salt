@@ -17,6 +17,7 @@ misc-packages:
       - xautolock
       - file
       - redhat-lsb
+      - python3-ipython
 
 acpid:
   service.running: []
