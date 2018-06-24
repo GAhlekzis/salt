@@ -51,7 +51,7 @@ delete-old-tmux:
   file.absent:
     - name: /home/user/.tmux.conf
 
-% if not salt['file.exists' ]('/home/user/.tmux.conf') %}
+{% if not salt['file.exists' ]('/home/user/.tmux.conf') %}
 link-tmux-conf:
   file.symlink:
       - name: /home/user/.tmux/tmux.conf
