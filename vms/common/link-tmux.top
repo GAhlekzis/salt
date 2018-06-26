@@ -1,0 +1,7 @@
+base:
+  qubes:type:standalone:
+    - match: pillar
+    - vms.common.link-tmux
+  qubes:type:app:
+    - match: pillar
+    - vms.common.link-tmux
