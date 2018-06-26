@@ -1,0 +1,10 @@
+base:
+  qubes:type:template:
+    - match: pillar
+    - vms.common.rm-tmux
+  qubes:type:standalone:
+    - match: pillar
+    - vms.common.rm-tmux
+  qubes:type:app:
+    - match: pillar
+    - vms.common.rm-tmux
