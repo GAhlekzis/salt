@@ -17,6 +17,7 @@ fedora-28-dvm:
   qvm.vm:
    - present:
      - label: red
+     - template: fedora-28
    - prefs:
      - label: red
      - dispvm-allowed: True
@@ -34,6 +35,7 @@ debian-9-dvm:
   qvm.vm:
    - present:
      - label: red
+     - template: debian-9
    - prefs:
      - label: red
      - dispvm-allowed: True
