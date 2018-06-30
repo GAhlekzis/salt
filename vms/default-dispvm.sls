@@ -43,7 +43,7 @@ debian-9-dvm:
      - enable:
        - appmenus-dispvm
 
-echo -e 'firefox.desktop\nst.desktop' | qvm-appmenus --set-whitelist=- --update debian-9-dvm:
+echo -e 'firefox-esr.desktop\nst.desktop' | qvm-appmenus --set-whitelist=- --update debian-9-dvm:
   cmd.run:
     - runas: {{ gui_user }}
     - requires:

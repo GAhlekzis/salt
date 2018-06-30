@@ -17,7 +17,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=f81e1acd3d70c0e704e1f3aab19c5858e98cff3c
+    - source_hash: sha1=ad4a0d9b280c1a37d2de1e37f4bce1eb6b9bfa23
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/omz.tar
     - enforce_toplevel: False
