@@ -1,0 +1,7 @@
+this executes the script at /etc/qubes-rpc/my.btc in the untrusted qube under the user "user"
+
+qrexec-client -d untrusted user:/etc/qubes-rpc/my.btc
+
+this can be used to display any information in dom0 which needs a internet connection or other services running.
+
+Like spotify songs or something

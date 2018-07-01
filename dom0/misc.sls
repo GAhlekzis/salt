@@ -18,6 +18,7 @@ misc-packages:
       - file
       - redhat-lsb
       - python3-ipython
+      - pulseaudio-utils
 
 acpid:
   service.running: []

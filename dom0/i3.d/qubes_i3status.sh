@@ -9,29 +9,29 @@ json() {
 }
 
 status_net() {
-    local netvms=$(qvm-ls --no-spinner --raw-data --fields NAME,FLAGS 2>/dev/null | grep '|...N....$' | cut -d '|' -f1)
+    local netvms=$(qvm-ls --no-spinner --raw-data --fields NAME,FLAGS 2>/dev/null | grep '|A..N....$' | cut -d '|' -f1)
 
     IFS_BAK=$IFS
     IFS=$'\n'
     for netvm in $netvms; do
-        local ip_addr=$(qvm-run "$netvm" -p 'ip -o -f inet addr' 2>/dev/null)
+	local ip_addr=$(qvm-run -p "$netvm" 'ip -o -f inet addr' 2>/dev/null)
         for ip_addr_line in $ip_addr; do
             local device_name=${ip_addr_line#* }
             device_name=${device_name%% *}
 
             if [[ $device_name == wl* ]]; then # this is a wifi device
-                local net=$(qvm-run $netvm -p 'iwconfig' 2>/dev/null)
+                local net=$(qvm-run -p $netvm 'iwconfig' 2>/dev/null)
                 local ssid=$(echo "$net" | perl -ne 'print "$1" if /ESSID:"(.*)"/')
                 local ip=${ip_addr_line#* inet }
                 ip=${ip%%/*}
                 if [[ -n $ssid ]]; then
                     local quality=$(echo "$net" | perl -ne 'print "$1" if /Quality=([^ ]+)/')
-                    json $device_name "$netvm: $ssid $ip $quality"
+                    json $device_name "inet: $ssid $ip $quality"
                 fi
             elif [[ $device_name == en* ]]; then # this is an ethernet device
                 local ip=${ip_addr_line#* inet }
                 ip=${ip%%/*}
-                json $device_name "$netvm: $ip"
+                json $device_name "inet: $ip"
             fi
         done
     done
@@ -56,7 +56,7 @@ status_bat() {
 
     local ac=''
     local color=''
-    if [[ $(cat /sys/class/power_supply/AC/online) == '1' ]]; then
+    if [[ $(cat /sys/class/power_supply/ADP1/online) == '1' ]]; then
         ac=' AC'
     elif ((bat < 25)); then
         color='#ff0000'
@@ -76,7 +76,7 @@ status_load() {
 
 status_qubes() {
     local qubes=$(qvm-ls --no-spinner --raw-data --fields FLAGS 2>/dev/null | grep -v '^0' | grep '^.r......' | wc -l)
-    json qubes "$qubes Qubes"
+    json qubes "$qubes Qubes running"
 }
 
 status_disk() {
@@ -94,13 +94,13 @@ main() {
             local qubes=$(status_qubes)
             # network status disabled by default as it's dangerous to run a
             # command on a qube from dom0
-            # local net=$(status_net)
-            local disk=$(status_disk)
+            local net=$(status_net)
+            #local disk=$(status_disk)
             local bat=$(status_bat)
             local load=$(status_load)
         fi
         local time=$(status_time)
-        echo ",[$qubes$disk$bat$load$time]"
+        echo ",[$qubes$net$disk$bat$load$time]"
         sleep 1
     done
 }

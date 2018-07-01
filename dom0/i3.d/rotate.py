@@ -70,7 +70,6 @@ def monitor_acpi_events(touch_and_track):
                     log.info("stopping onboard")
                     os.kill(onboard_pid, signal.SIGTERM)
             else:
-                print("Hello!")
                 for x in touch_and_track:
                     cmd_and_log(["xinput", "disable", x])
                 #subprocess.call(["xinput", "--disable", "SynPS/2 Synaptics TouchPad"])
