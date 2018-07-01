@@ -34,6 +34,13 @@ uptodate-dom0:
     - mode: 640
     - source: salt://dom0/redshift.conf
 
+/home/alj/.conkyrc:
+  file.managed:
+    - user: alj
+    - group: alj
+    - mode: 640
+    - source: salt://dom0/conky.conf
+
 /home/alj/.bashrc:
   file.managed:
     - user: alj

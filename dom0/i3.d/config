@@ -321,6 +321,7 @@ exec_always --no-startup-id xinput set-prop 10 "libinput Tapping Enabled" 1
 #make Druck a windows key:
 exec_always --no-startup-id setxkbmap -option altwin:prtsc_rwin
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id conky
 
 #bindsym $mod+F1 exec xrandr --output LVDS1 --primary --auto && xrandr --output VGA1 --off
 bindsym $mod+F1 exec --no-startup-id sh /home/alj/.screenlayout/homeScreen.sh
