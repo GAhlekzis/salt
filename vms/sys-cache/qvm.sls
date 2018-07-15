@@ -12,4 +12,4 @@ f28-squid-cache-network:
 
 f28-squid-cache-service:
   qvm.service:
-    - name qubes-update-cache
+    - name: qubes-update-cache
