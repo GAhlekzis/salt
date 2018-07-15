@@ -1,5 +1,7 @@
-squid:
-  pkg.installed: []
+squid-packages:
+  pkg.installed:
+    - squid
+    - git
 
 squid-git-repo:
   git.cloned:
