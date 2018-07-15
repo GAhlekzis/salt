@@ -1,9 +1,0 @@
-[Unit]
-Description=ScreenLock on suspend
-Before=sleep.target
-
-[Service]
-User=alj
-Type=forking
-Environment=Display=:0
-ExecStart=

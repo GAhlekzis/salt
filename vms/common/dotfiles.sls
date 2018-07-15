@@ -27,7 +27,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=466e716aeb45d0cadb0b693e1a66c0b5de4632b3
+    - source_hash: sha1=51ee507c25cc095fd64a234cb4d85122e95318c3
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tmux.tar
     - enforce_toplevel: False

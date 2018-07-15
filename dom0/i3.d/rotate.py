@@ -52,7 +52,7 @@ def monitor_acpi_events(touch_and_track):
 
     is_laptop_mode = True
     log.info("connected to acpi socket %s", socket)
-    onboard_pid = None
+    #onboard_pid = None
     while True:
         event = socketACPI.recv(4096)
         log.debug("catching acpi event %s", event)
@@ -65,21 +65,21 @@ def monitor_acpi_events(touch_and_track):
             if is_laptop_mode:
                 for x in touch_and_track:
                     cmd_and_log(["xinput", "enable", x])
-                log.info("onboard pid %s", onboard_pid)
-                if onboard_pid:
-                    log.info("stopping onboard")
-                    os.kill(onboard_pid, signal.SIGTERM)
+                #log.info("onboard pid %s", onboard_pid)
+                # if onboard_pid:
+                #     log.info("stopping onboard")
+                #     os.kill(onboard_pid, signal.SIGTERM)
             else:
                 for x in touch_and_track:
                     cmd_and_log(["xinput", "disable", x])
-                #subprocess.call(["xinput", "--disable", "SynPS/2 Synaptics TouchPad"])
-                p = subprocess.Popen(['nohup', 'onboard'],
-                    stdout=open('/dev/null', 'w'),
-                    #stderr=open('logfile.log', 'a'),
-                    preexec_fn=os.setpgrp
-                )
-                onboard_pid = p.pid
-                log.info("started onboard with pid %s", onboard_pid)
+                subprocess.call(["xinput", "--disable", "SynPS/2 Synaptics TouchPad"])
+                # p = subprocess.Popen(['nohup', 'onboard'],
+                #     stdout=open('/dev/null', 'w'),
+                #     #stderr=open('logfile.log', 'a'),
+                #     preexec_fn=os.setpgrp
+                # )
+                # onboard_pid = p.pid
+                # log.info("started onboard with pid %s", onboard_pid)
         time.sleep(0.3)
 
 def monitor_stylus_proximity(stylus, finger_touch):
