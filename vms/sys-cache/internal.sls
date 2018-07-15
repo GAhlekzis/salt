@@ -1,5 +1,5 @@
 squid-packages:
-  pkg.installed:
+  pkgs.installed:
     - squid
     - git
 
