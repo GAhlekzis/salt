@@ -2,5 +2,7 @@ include:
   - .qvm
 
 kali:
-  qvm.prefs:
+  - qvm.present:
+    - name: kali
+    - label: orange
     - template: kali-rolling
