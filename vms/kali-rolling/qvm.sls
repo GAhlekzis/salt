@@ -9,7 +9,7 @@ kali-rolling-network:
   qvm.prefs:
     - name: kali-rolling
     - netvm: sys-firewall
-    
-dom0:
+
+kali-rolling-command:
   cmd.script:
     - source: salt://vms/kali-rolling/extend_volume.sh
