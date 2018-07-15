@@ -1,0 +1,6 @@
+base:
+  dom0:
+    - vms.sys-cache.qvm
+    - vms.sys-cache.use
+  f28-squid-cache:
+    - vms.sys-cache.internal
