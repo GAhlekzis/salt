@@ -2,7 +2,11 @@ include:
   - .qvm
 
 sys-cache:
+  qvm.present: []
+
+sys-cache-template:
   qvm.prefs:
+    - name: sys-cache
     - template: f28-squid-cache
 
 sys-cache-service:
