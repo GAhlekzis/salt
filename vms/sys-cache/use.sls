@@ -11,4 +11,4 @@ sys-cache:
      - netvm: sys-whonix
    - service:
      - enable:
-       - qubes-update-cache
+       - qubes-updates-cache

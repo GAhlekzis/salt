@@ -11,5 +11,5 @@ squid-git-repo:
 
 squid-install:
   cmd.run:
-    - name: sh /home/user/install
+    - name: sh /home/user/qubes-updates-cache/install
     - order: last
