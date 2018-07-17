@@ -21,6 +21,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/omz.tar
     - enforce_toplevel: False
+    - overwrite: True
 
 /home/user/.tmux:
   archive.extracted:
@@ -31,6 +32,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tmux.tar
     - enforce_toplevel: False
+    - overwrite: True
 
 /home/user/.oh-my-zsh/custom/themes/:
   archive.extracted:
@@ -41,7 +43,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/power.tar
     - enforce_toplevel: False
-
+    - overwrite: True
 
 /home/user/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh:
   file.managed:
