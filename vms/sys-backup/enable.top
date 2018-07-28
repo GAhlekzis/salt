@@ -1,0 +1,6 @@
+base:
+  dom0:
+    - vms.sys-backup.qvm
+    - vms.sys-backup.use
+  f28m-ssh:
+    - vms.sys-backup.internal

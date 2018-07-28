@@ -19,6 +19,7 @@ misc-packages:
       - redhat-lsb
       - python3-ipython
       - pulseaudio-utils
+      - borgbackup
 
 acpid:
   service.running: []
