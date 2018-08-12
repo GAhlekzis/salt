@@ -20,6 +20,7 @@ misc-packages:
       - python3-ipython
       - pulseaudio-utils
       - borgbackup
+      - sshfs
 
 acpid:
   service.running: []
