@@ -1,6 +1,6 @@
 include:
   - .qvm
 
-UNI:
+uni:
   qvm.prefs:
     - template: deb9-studium
