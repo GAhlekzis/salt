@@ -30,7 +30,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=d70df9110d1d4611b12f0bacbad342623e88bf38
+    - source_hash: sha1=ef65d6c2a8e7df78baa907adbb2cb50bb6ea581b
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tars/oh-my-zsh.tar
     - enforce_toplevel: False
