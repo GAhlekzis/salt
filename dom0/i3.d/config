@@ -26,19 +26,37 @@ font pango:Source Code Pro 8
 
 set $black #121212
 
+                  client.focused	  dom0 #002b36 #586e75 #fdf6e3 #268bd2
+                  client.focused_inactive dom0 #002b36 #073642 #839496 #073642
+                  client.unfocused        dom0 #002b36 #073642 #839496 #073642
+                  client.urgent           dom0 #002b36 #dc322f #fdf6e3 #002b36
 
-client.focused	        dom0 $primary $primary	 $background $primary
-client.focused_inactive dom0 $primary $primary 	 $background $primary
-client.unfocused        dom0 $gray    $gray      $foreground $secondary
-client.urgent           dom0 $warning $warning   $foreground $warning
+                  # client.focused	  dom0 $primary $primary	 $background $primary
+                  # client.focused_inactive dom0 $primary $primary 	 $background $primary
+                  # client.unfocused        dom0 $primary $primary      $background $primary
+                  # client.urgent           dom0 $warning $warning   $foreground $warning
 
-set $background #171920
-set $foreground #3c58a0
-set $gray #2b3c80
-set $primary #6e7fa0
-set $secondary #566fa0
-set $tertiary #4b65a0
-set $warning #5a74a0
+                  set $base03 #002b36
+                  set $base02 #073642
+                  set $base01 #586e75
+                  set $base00 #657b83
+                  set $base0  #839496
+                  set $base1  #93a1a1
+                  set $base2  #eee8d5
+                  set $base3  #fdf6e3
+
+                  set $yellow #b58900
+                  set $red    #dc322f
+
+                  set $background #002b36
+                  set $foreground #839496
+                  set $gray #eee8d5
+                  set $primary #839496
+                  set $secondary #93a1a1
+                  set $tertiary #073642
+                  set $warning #eee8d5
+
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -50,14 +68,14 @@ bar {
     font pango:Source Code Pro 12
 
     colors {
-        background $background
-        statusline $primary
+        focused_workspace  $yellow $yellow $base03
+        active_workspace   $base01 $base01 $base03
+        inactive_workspace $base02 $base03 $base0
+        urgent_workspace   $red    $red    $base3
 
-        # Colors go <border> <background> <text> <indicator>
-        focused_workspace $secondary $background $foreground
-        active_workspace $primary $background $foreground
-        inactive_workspace $primary $background $foreground
-        urgent_workspace $foreground $warning
+        background $base02
+        statusline $base0
+        separator $base01
     }
 }
 

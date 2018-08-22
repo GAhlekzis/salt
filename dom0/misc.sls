@@ -22,12 +22,24 @@ misc-packages:
       - borgbackup
       - fuse-sshfs
 
+install-st:
+  file.managed:
+    - name: /bin/st
+    - user: root
+    - group: root
+    - mode: 755
+    - source: salt://vms/common/shell/st/st
+
 acpid:
   service.running: []
 
 uptodate-dom0:
   pkg.uptodate: []
 
+set-shell:
+  user.present:
+    - name: alj
+    - shell: /user/bin/zsh
 
 /home/alj/.config/redshift.conf:
   file.managed:
@@ -56,3 +68,10 @@ uptodate-dom0:
     - group: alj
     - mode: 644
     - source: salt://dom0/emacs.conf
+
+/home/alj/.zshrc:
+  file.managed:
+    - user: alj
+    - group: alj
+    - mode: 644
+    - source: salt://vms/common/dotfiles/zshrc
