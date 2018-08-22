@@ -43,11 +43,19 @@ font-cache:
 
 install-st:
   file.managed:
-    - name: /bin/st
+    - name: /usr/bin/st
     - user: root
     - group: root
     - mode: 755
     - source: salt://vms/common/shell/st/st
+
+install-tmux:
+  file.managed:
+    - name: /usr/bin/tmux
+    - user: root
+    - group: root
+    - mode 755
+    - source: salt://dom0/tmux
 
 acpid:
   service.running: []
