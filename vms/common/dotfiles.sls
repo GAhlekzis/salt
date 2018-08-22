@@ -14,7 +14,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tars/spacemacs.d.tar
     - enforce_toplevel: False
-    - if_missing: True
+    - trim_output: True
     - overwrite: True
 
 
@@ -34,7 +34,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tars/oh-my-zsh.tar
     - enforce_toplevel: False
-    - if_missing: True
+    - trim_output: True
     - overwrite: True
 
 /home/user/.oh-my-zsh/custom/plugins/:
@@ -46,7 +46,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tars/zsh-plugins.tar
     - enforce_toplevel: False
-    - if_missing: True
+    - trim_output: True
     - overwrite: True
 
 /home/user/.oh-my-zsh/custom/themes/:
@@ -58,7 +58,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tars/power.tar
     - enforce_toplevel: False
-    - if_missing: True
+    - trim_output: True
     - overwrite: True
 
 /home/user/.tmux:
@@ -70,7 +70,7 @@
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tars/tmux.tar
     - enforce_toplevel: False
-    - if_missing: True
+    - trim_output: True
     - overwrite: True
 
 /home/user/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh:
