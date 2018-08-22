@@ -56,7 +56,7 @@
     - mode: 644
     - source_hash: sha1=585c615af9624b0915a71e2dce062a45027919ee
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/tars/power.tar
+    - source: salt://vms/common/dotfiles/tars/zsh-themes.tar
     - enforce_toplevel: False
     - trim_output: True
     - overwrite: True
