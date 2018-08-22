@@ -54,7 +54,7 @@ install-tmux:
     - name: /usr/bin/tmux
     - user: root
     - group: root
-    - mode 755
+    - mode: 755
     - source: salt://dom0/tmux
 
 acpid:
