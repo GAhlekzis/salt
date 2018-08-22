@@ -30,7 +30,7 @@
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+  DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -71,6 +71,8 @@ plugins=(
     sudo
     history
     emacs
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -83,12 +85,19 @@ source $ZSH/oh-my-zsh.sh
   alias gdl="git branch | grep -v "master" | xargs git branch -D"
 
 # ipython instead of python
-  alias pi="ipython3 --no-confirm-exit"
+  alias pi3="ipython3 --no-confirm-exit"
+  alias pi="ipython --no-confirm-exit"
 
+
+  alias te="TERM=xterm $EMACS_PLUGIN_LAUNCHER -nw"
+  alias e=eframe
+
+  export PATH=/home/alj/bin/:$PATH
+  export GIT_EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -nw"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+  export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

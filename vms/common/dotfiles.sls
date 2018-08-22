@@ -1,9 +1,22 @@
-/home/user/.emacs:
+/home/user/.spacemacs:
   file.managed:
     - user: user
     - group: user
     - mode: 644
-    - source: salt://vms/common/dotfiles/emacs.conf
+    - source: salt://vms/common/dotfiles/spacemacs.conf
+
+/home/user/.emacs.d:
+  archive.extracted:
+    - user: user
+    - group: user
+    - mode: 644
+    - source_hash: sha1=f9658a8203c6caaf8f84440c1d12eb04d6f8837d
+    - source_hash_update: True
+    - source: salt://vms/common/dotfiles/tars/spacemacs.d.tar
+    - enforce_toplevel: False
+    - if_missing: True
+    - overwrite: True
+
 
 /home/user/.zshrc:
   file.managed:
@@ -17,21 +30,23 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=8e59e13d647b5c203fbe3dfa793a7affdebab402
+    - source_hash: sha1=d70df9110d1d4611b12f0bacbad342623e88bf38
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/omz.tar
+    - source: salt://vms/common/dotfiles/tars/oh-my-zsh.tar
     - enforce_toplevel: False
+    - if_missing: True
     - overwrite: True
 
-/home/user/.tmux:
+/home/user/.oh-my-zsh/custom/plugins/:
   archive.extracted:
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=51ee507c25cc095fd64a234cb4d85122e95318c3
+    - source_hash: sha1=0f24c196637b883905e6d237d8479d9055ec0481
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/tmux.tar
+    - source: salt://vms/common/dotfiles/tars/zsh-plugins.tar
     - enforce_toplevel: False
+    - if_missing: True
     - overwrite: True
 
 /home/user/.oh-my-zsh/custom/themes/:
@@ -41,8 +56,21 @@
     - mode: 644
     - source_hash: sha1=585c615af9624b0915a71e2dce062a45027919ee
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/power.tar
+    - source: salt://vms/common/dotfiles/tars/power.tar
     - enforce_toplevel: False
+    - if_missing: True
+    - overwrite: True
+
+/home/user/.tmux:
+  archive.extracted:
+    - user: user
+    - group: user
+    - mode: 644
+    - source_hash: sha1=6e193e5e6d8019dd1d26bb69a485b6b2bf5f2c75
+    - source_hash_update: True
+    - source: salt://vms/common/dotfiles/tars/tmux.tar
+    - enforce_toplevel: False
+    - if_missing: True
     - overwrite: True
 
 /home/user/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh:
