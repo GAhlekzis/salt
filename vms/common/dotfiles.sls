@@ -10,7 +10,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=f9658a8203c6caaf8f84440c1d12eb04d6f8837d
+    - source_hash: sha1=a7448c06f34eb9c091c8d520fdea11641ac6d8d9
     - source_hash_update: True
     - source: salt://vms/common/dotfiles/tars/spacemacs.d.tar
     - enforce_toplevel: False
