@@ -93,4 +93,4 @@ set-shell:
     - user: alj
     - group: alj
     - mode: 644
-    - source: salt://vms/dom0/zshrc
+    - source: salt://dom0/zshrc
