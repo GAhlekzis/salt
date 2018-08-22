@@ -22,6 +22,25 @@ misc-packages:
       - borgbackup
       - fuse-sshfs
 
+/home/alj/.fonts:
+  file.directory:
+    - mode: 775
+    - order: 1
+
+/home/alj/.fonts/SauceCodePro_Nerd.ttf:
+  file.managed:
+    - user: alj
+    - group: alj
+    - mode: 775
+    - order: 2
+    - source: salt://vms/common/font/SauceCodePro_Nerd.ttf
+
+font-cache:
+  cmd.run:
+    - name: fc-cache -f
+    - runas: alj
+    - order: 3
+
 install-st:
   file.managed:
     - name: /bin/st
