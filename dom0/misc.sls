@@ -66,7 +66,7 @@ uptodate-dom0:
 set-shell:
   user.present:
     - name: alj
-    - shell: /user/bin/zsh
+    - shell: /usr/bin/zsh
 
 /home/alj/.config/redshift.conf:
   file.managed:
