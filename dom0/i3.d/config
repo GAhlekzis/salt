@@ -248,12 +248,12 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec i3-msg exit
 
-set $Locker i3lock -c 002b36 && sleep 1
+set $Locker i3lock -c 073642 && sleep 1
 set $Shutdown qvm-shutdown --all && sleep 7 && poweroff
 set $Reboot qvm-shutdown --all && sleep 7 && reboot
 
 # Use a screen locker
-exec --no-startup-id xautolock -detectsleep -time 3 -locker i3lock -c 002b36 -notify 30 -notifier \"notify-send -t 2000 'Locking screen in 30 seconds'\"
+exec --no-startup-id xautolock -detectsleep -time 3 -locker i3lock -c 073642 -notify 30 -notifier \"notify-send -t 2000 'Locking screen in 30 seconds'\"
 
 # Manually trigger Screenlock:
 bindsym $mod+Escape workspace lock; exec $Locker
