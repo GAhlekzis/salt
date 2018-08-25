@@ -26,35 +26,38 @@ font pango:Source Code Pro 8
 
 set $black #121212
 
-                  client.focused	  dom0 #002b36 #586e75 #fdf6e3 #268bd2
-                  client.focused_inactive dom0 #002b36 #073642 #839496 #073642
-                  client.unfocused        dom0 #002b36 #073642 #839496 #073642
-                  client.urgent           dom0 #002b36 #dc322f #fdf6e3 #002b36
+client.focused	        dom0 #002b36 #586e75 #fdf6e3 #268bd2
+client.focused_inactive dom0 #002b36 #073642 #839496 #073642
+client.unfocused        dom0 #002b36 #073642 #839496 #073642
+client.urgent           dom0 #002b36 #dc322f #fdf6e3 #002b36
 
-                  # client.focused	  dom0 $primary $primary	 $background $primary
-                  # client.focused_inactive dom0 $primary $primary 	 $background $primary
-                  # client.unfocused        dom0 $primary $primary      $background $primary
-                  # client.urgent           dom0 $warning $warning   $foreground $warning
 
-                  set $base03 #002b36
-                  set $base02 #073642
-                  set $base01 #586e75
-                  set $base00 #657b83
-                  set $base0  #839496
-                  set $base1  #93a1a1
-                  set $base2  #eee8d5
-                  set $base3  #fdf6e3
+set $base03  #002b36
+set $base02  #073642
+set $base01  #586e75
+set $base00  #657b83
+set $base0   #839496
+set $base1   #93a1a1
+set $base2   #eee8d5
+set $base3   #fdf6e3
 
-                  set $yellow #b58900
-                  set $red    #dc322f
+set $yellow  #b58900
+set $orange  #cb4b16
+set $red     #dc322f
+set $magenta #d33682
+set $violet  #6c71c4
+set $blue    #268bd2
+set $cyan    #2aa198
+set $green   #859900
 
-                  set $background #002b36
-                  set $foreground #839496
-                  set $gray #eee8d5
-                  set $primary #839496
-                  set $secondary #93a1a1
-                  set $tertiary #073642
-                  set $warning #eee8d5
+
+set $background #002b36
+set $foreground #839496
+set $gray #eee8d5
+set $primary #839496
+set $secondary #93a1a1
+set $tertiary #073642
+set $warning #eee8d5
 
 
 
