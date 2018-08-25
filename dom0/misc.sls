@@ -75,19 +75,32 @@ set-shell:
     - mode: 640
     - source: salt://dom0/redshift.conf
 
-/home/alj/.conkyrc:
+/home/alj/.preconky:
   file.managed:
     - user: alj
     - group: alj
     - mode: 640
     - source: salt://dom0/conky.conf
 
-/home/alj/.bashrc:
+/home/alj/.preconky:
   file.managed:
     - user: alj
     - group: alj
-    - mode: 644
-    - source: salt://dom0/bashrc
+    - mode: 640
+    - source: salt://dom0/conky.conf
+
+/home/alj/.conky-parse.perl:
+  file.managed:
+    - user: alj
+    - group: alj
+    - mode: 755
+    - source: salt://dom0/conky-parse.perl
+
+parse-conky:
+  cmd.run:
+    - cwd: /home/alj
+    - name: "perl .conky-parse.perl .preconky > .conkyrc"
+    - runas: alj
 
 /home/alj/.emacs:
   file.managed:
