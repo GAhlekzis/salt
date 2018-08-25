@@ -82,13 +82,6 @@ set-shell:
     - mode: 640
     - source: salt://dom0/conky.conf
 
-/home/alj/.preconky:
-  file.managed:
-    - user: alj
-    - group: alj
-    - mode: 640
-    - source: salt://dom0/conky.conf
-
 /home/alj/.conky-parse.perl:
   file.managed:
     - user: alj
