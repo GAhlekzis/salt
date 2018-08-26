@@ -11,6 +11,7 @@ vm-fedora-minimal-pkgs:
       - file
       - tlp
       - tree
+      - python2-futures
 
 purge-old-pkgs-fedora-minimal:
   pkg.purged:
