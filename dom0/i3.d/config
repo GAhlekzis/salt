@@ -16,7 +16,7 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-font pango:Source Code Pro 8
+font pango:Source Code Pro 9
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -31,7 +31,7 @@ client.focused_inactive dom0 #002b36 #073642 #839496 #073642
 client.unfocused        dom0 #002b36 #073642 #839496 #073642
 client.urgent           dom0 #002b36 #dc322f #fdf6e3 #002b36
 
-
+#darker
 set $base03  #002b36
 set $base02  #073642
 set $base01  #586e75
@@ -40,6 +40,7 @@ set $base0   #839496
 set $base1   #93a1a1
 set $base2   #eee8d5
 set $base3   #fdf6e3
+#lighter
 
 set $yellow  #b58900
 set $orange  #cb4b16
@@ -60,7 +61,6 @@ set $tertiary #073642
 set $warning #eee8d5
 
 
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -77,76 +77,83 @@ bar {
         urgent_workspace   $red    $red    $base3
 
         background $base02
-        statusline $base0
-        separator $base01
+        statusline $base1
+        separator $base00
     }
 }
 
+set $red.secondary #073642
+set $red.tertiary #dc322f
 
+set $orange.secondary #073642
+set $orange.tertiary #dc322f
 
-# # class                 label   border       backgr.   text    indicator  child_border
-# client.background	dom0		     $black
-# client.focused		dom0	$dom.main    $dom.main #ffffff #a6907d
-# client.focused_inactive	dom0	$dom.main    #361a01   #ffffff #a6907d
-# client.unfocused	dom0	$dom.main    #361a01   #999999 #a6907d
-# client.urgent		dom0	$dom.urgent  #a6907d   #ce0000 #a6907d
+set $yellow.secondary #073642
+set $yellow.tertiary #dc322f
 
-set_from_resource $red.primary i3wm.color9 #cc6666
-set_from_resource $red.secondary i3wm.color1 #a54242
+set $green.secondary #073642
+set $green.tertiary #dc322f
 
+set $grey.secondary #073642
+set $grey.tertiary #dc322f
+
+set $blue.secondary #073642
+set $blue.tertiary #dc322f
+
+set $purple.secondary #073642
+set $purple.tertiary #dc322f
+
+set $black.secondary #073642
+Set $black.tertiary #dc322f
+
+#class			#vm	#border #background	#text	#indicator #childborder
 client.background	red		$black
-client.focused		red	$red.primary $red.primary #ffffff #f19b90
-client.focused_inactive	red	$red.primary $red.secondary #ffffff #f19b90
-client.unfocused	red	$red.primary $red.secondary #999999 #f19b90
-client.urgent		red	$red.primary #f19b90 #ce0000 #f19b90
+client.focused		red	$red 	$red		$base03	$red.tertiary
+client.focused_inactive	red	$red 	$red.secondary 	$base2	$red.tertiary
+client.unfocused	red	$red 	$red.secondary 	$base2  $red.tertiary
+client.urgent		red	$red 	$red.tertiary 	#ce0000 $red.tertiary
 
 client.background	orange		$black
-client.focused		orange	#d05f03 #d05f03 #ffffff #daa67e
-client.focused_inactive	orange	#d05f03 #7b3702 #ffffff #daa67e
-client.unfocused	orange	#d05f03 #7b3702 #999999 #daa67e
-client.urgent		orange	#d05f03 #daa67e #ce0000 #daa67e
-
-set_from_resource $yellow.primary i3wm.color11 #f0c674
-set_from_resource $yellow.secondary i3wm.color03 #de935f
+client.focused		orange	$orange $orange		$base03 $orange.tertiary
+client.focused_inactive	orange	$orange $orange.secondary $base2 $orange.tertiary
+client.unfocused	orange	$orange $orange.secondary $base2 $orange.tertiary
+client.urgent		orange	$orange $orange.tertiary #ce0000 $orange.tertiary
 
 client.background	yellow		$black
-client.focused		yellow	$yellow.primary $yellow.primary #000000 #cacb7c
-client.focused_inactive	yellow	$yellow.primary $yellow.secondary #ffffff #cacb7c
-client.unfocused	yellow	$yellow.primary $yellow.secondary #999999 #cacb7c
-client.urgent		yellow	$yellow.primary #cacb7c #ce0000 #cacb7c
-
-set_from_resource $green.primary i3wm.color10 #b5bd68
-set_from_resource $green.secondary i3wm.color2 #8c9440
+client.focused		yellow	$yellow $yellow		$base03 $yellow.tertiary
+client.focused_inactive	yellow	$yellow $yellow.secondary $base2 $yellow.tertiary
+client.unfocused	yellow	$yellow $yellow.secondary $base2 $yellow.tertiary
+client.urgent		yellow	$yellow $yellow.tertiary #ce0000 $yellow.tertiary
 
 client.background	green		$black
-client.focused		green	$green.primary $green.primary #000000 #7dd5aa
-client.focused_inactive	green	$green.primary $green.secondary #ffffff #7dd5aa
-client.unfocused	green	$green.primary $green.secondary #999999 #7dd5aa
-client.urgent		green	$green.primary #7dd5aa #ce0000 #7dd5aa
+client.focused		green	$green $green		$base03 $green.tertiary
+client.focused_inactive	green	$green $green.secondary $base2 $green.tertiary
+client.unfocused	green	$green $green.secondary $base2 $green.tertiary
+client.urgent		green	$green $green.tertiary #ce0000 $green.tertiary
 
-client.background	gray		$black
-client.focused		gray 	#8c959f #8c959f #ffffff #c3c8cd
-client.focused_inactive	gray	#8c959f #676d75 #ffffff #c3c8cd
-client.unfocused	gray	#8c959f #676d75 #999999 #c3c8cd
-client.urgent		gray	#8c959f #c3c8cd #ce0000 #c3c8cd
+client.background	grey		$black
+client.focused		grey	$grey $grey		$base3 $grey.tertiary
+client.focused_inactive	grey	$grey $grey.secondary 	$base3 $grey.tertiary
+client.unfocused	grey	$grey $grey.secondary 	$base2 $grey.tertiary
+client.urgent		grey	$grey $grey.tertiary 	#ce0000 $grey.tertiary
 
 client.background	blue		$black
-client.focused		blue 	#3384d6 #3384d6 #ffffff #95bee8
-client.focused_inactive	blue	#3384d6 #1f5082 #ffffff #95bee8
-client.unfocused	blue	#3384d6 #1f5082 #999999 #95bee8
-client.urgent		blue	#3384d6 #95bee8 #ce0000 #95bee8
+client.focused		blue	$blue $blue		$base03 $blue.tertiary
+client.focused_inactive	blue	$blue $blue.secondary 	$base2 $blue.tertiary
+client.unfocused	blue	$blue $blue.secondary 	$base2 $blue.tertiary
+client.urgent		blue	$blue $blue.tertiary 	#ce0000 $blue.tertiary
 
 client.background	purple		$black
-client.focused		purple	#8f5cbe #8f5cbe #ffffff #c6abdd
-client.focused_inactive	purple	#8f5cbe #5c3e78 #ffffff #c6abdd
-client.unfocused	purple	#8f5cbe #5c3e78 #999999 #c6abdd
-client.urgent		purple	#8f5cbe #c6abdd #ce0000 #c6abdd
+client.focused		purple	$purple $purple		$base3 $purple.tertiary
+client.focused_inactive	purple	$purple $purple.secondary $base2 $purple.tertiary
+client.unfocused	purple	$purple $purple.secondary $base2 $purple.tertiary
+client.urgent		purple	$purple $purple.tertiary #ce0000 $purple.tertiary
 
 client.background	black		$black
-client.focused		black	#595959 #595959 #ffffff #a3a3a3
-client.focused_inactive	black	#595959 #3a3a3a #ffffff #a3a3a3
-client.unfocused	black	#595959 #3a3a3a #999999 #a3a3a3
-client.urgent		black	#595959 #a3a3a3 #ce0000 #a3a3a3
+client.focused		black	$black $black		$base3 $black.tertiary
+client.focused_inactive	black	$black $black.secondary $base2 $black.tertiary
+client.unfocused	black	$black $black.secondary $base2 $black.tertiary
+client.urgent		black	$black $black.tertiary 	#ce0000 $black.tertiary
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
