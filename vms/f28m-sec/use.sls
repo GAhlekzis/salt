@@ -8,7 +8,3 @@ vault:
 vera:
   qvm.prefs:
     - template: f28m-sec
-
-mfa:
-  qvm.prefs:
-    - template: f28m-sec
