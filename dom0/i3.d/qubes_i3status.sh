@@ -40,7 +40,7 @@ status_net() {
 }
 
 status_time() {
-    local time=$(date '+%F %T')
+    local time=$(date '+%F %a %T')
     echo -n "{\"name\":\"time\",\"full_text\":\"$time\"}" # last entry
 }
 
