@@ -11,6 +11,7 @@ standard-packages:
 extra-packages:
   pkg.installed:
     - pkgs:
+      - qubes-core-agent-networking
       - python3
       - curlftpfs
       - python3-pip
