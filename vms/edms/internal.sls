@@ -29,7 +29,7 @@ extra-packages:
 pip-ocrmypdf:
   pip.installed:
     - name: ocrmypdf
-    - bin-env: 'usr/bin/pip3'
+    - bin-env: '/usr/bin/pip3'
     - require:
       - extra-packages
 
