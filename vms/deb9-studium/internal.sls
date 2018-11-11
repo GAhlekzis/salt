@@ -2,7 +2,6 @@ packages:
   pkg.installed:
     - pkgs:
       - git
-      - emacs
       - auctex
       - vim-latexsuite
       - pidgin
@@ -16,3 +15,10 @@ packages:
       - zsh
       - nautilus
       - xournal
+
+newer-emacs:
+  pkg.installed:
+    - fromrepo: stretch-backports
+    - refresh: True
+    - name: emacs25
+    - allow_updates: True

@@ -372,10 +372,10 @@ bindsym XF86AudioMicMute exec sh -c "pactl set-source-mute 1 toggle"
 focus_follows_mouse no
 
 # Left Monitor:
-set $MonL eDP
+set $MonL eDP1
 
 # Right Monitor:
-set $MonR DP-2-2
+set $MonR DP2-2
 
 workspace 1 output $MonL
 workspace 2 output $MonL
