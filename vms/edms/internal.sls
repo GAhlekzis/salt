@@ -14,7 +14,7 @@ extra-packages:
       - python3
       - curlftpfs
       - python3-pip
-      - python-pip
+      - python2-pip
       - ImageMagick
       - parallel
       - poppler-utils
@@ -22,9 +22,9 @@ extra-packages:
       - unpaper
       - tesseract
       - tesseract-langpack-deu
-      - python-reportlab
-      - python-lxml
-      - python-imaging
+      - python2-reportlab
+      - python2-lxml
+      - python2-imaging
       - ghostscript
 
 pip-ocrmypdf:
@@ -36,7 +36,7 @@ pip-ocrmypdf:
 
 /mnt/ftp/:
   mount.mounted:
-    - device: 192.168.178.110:/home/alex/scans
+    - device: 192.168.178.110
     - fstype: fuse
     - mkmnt: True
     - opts: rw,uid=500,user,noauto
