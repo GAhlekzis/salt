@@ -15,7 +15,7 @@ extra-packages:
       - python3
       - curlftpfs
       - python3-pip
-      - python2-pip
+      #      - python2-pip
       - ImageMagick
       - parallel
       - poppler-utils
