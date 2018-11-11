@@ -36,7 +36,7 @@ pip-ocrmypdf:
 
 /mnt/ftp/:
   mount.mounted:
-    - device: 192.168.178.110
+    - device: curlftpfs#192.168.178.110
     - fstype: fuse
     - mkmnt: True
     - opts: rw,uid=500,user,noauto
