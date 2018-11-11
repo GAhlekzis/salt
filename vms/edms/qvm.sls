@@ -1,4 +1,4 @@
-qubes-template-fedora-28-minimal:
+qubes-template-fedora-28-minimal-installed:
   pkg.installed: []
 
 fm-edms:
