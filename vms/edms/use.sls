@@ -2,7 +2,7 @@ include:
   - .qvm
 
 edms-dvm:
-  qvm.prefs:
+  qvm.present:
     - template: fm-edms
     - template_for_dispvms: True
     - vcpus: 4
