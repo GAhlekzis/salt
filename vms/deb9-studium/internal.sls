@@ -22,3 +22,8 @@ newer-emacs:
     - refresh: True
     - name: emacs25
     - allow_updates: True
+
+purge-old-emacs:
+  pkg.purged:
+    - pkgs:
+      - emacs24
