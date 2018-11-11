@@ -35,8 +35,7 @@ pip-ocrmypdf:
 
 /mnt/ftp/:
   mount.mounted:
-    - device: curlftpfs#192.168.178.110
+    - device: curlftpfs#alex:Gvh9DffmxL72DwCgxtUm@192.168.178.110
     - fstype: fuse
     - mkmnt: True
     - opts: rw,uid=500,user,noauto
-    - extra_mount_invisible_keys: password=Gvh9DffmxL72DwCgxtUm,user=alex
