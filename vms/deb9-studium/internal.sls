@@ -18,8 +18,8 @@ packages:
 
 newer-emacs:
   pkg.installed:
-    - require: purge-old-emacs:
-      - pkg.purged
+    - require:
+      - purge-old-emacs
     - fromrepo: stretch-backports
     - refresh: True
     - name: emacs
