@@ -15,7 +15,7 @@ extra-packages:
       - python3
       - curlftpfs
       - python3-pip
-      #      - python2-pip
+      - python2-pip
       - ImageMagick
       - parallel
       - poppler-utils
@@ -26,10 +26,11 @@ extra-packages:
       - python2-reportlab
       - python2-lxml
       - ghostscript
+      - ocrmypdf
 
-pip-ocrmypdf:
-  pip.installed:
-    - name: ocrmypdf
-    - bin-env: '/usr/bin/pip3'
-    - require:
-      - extra-packages
+# pip-ocrmypdf:
+#   pip.installed:
+#     - name: ocrmypdf
+#     - bin-env: '/usr/bin/pip3'
+#     - require:
+#       - extra-packages
