@@ -26,7 +26,6 @@ extra-packages:
       - python2-reportlab
       - python2-lxml
       - ghostscript
-      - ocrmypdf
 
 # pip-ocrmypdf:
 #   pip.installed:
@@ -34,3 +33,6 @@ extra-packages:
 #     - bin-env: '/usr/bin/pip3'
 #     - require:
 #       - extra-packages
+
+'pip3 install --upgrade ocrmypdf':
+  cmd.run
