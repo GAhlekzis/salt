@@ -22,7 +22,6 @@ extra-packages:
       - unpaper
       - tesseract
       - tesseract-langpack-deu
-      - tesseract-langpack-eng
       - python-reportlab
       - python-lxml
       - python-imaging
@@ -39,5 +38,6 @@ pip-ocrmypdf:
   mount.mounted:
     - device: 192.168.178.110:/home/alex/scans
     - fstype: fuse
+    - mkmnt: True
     - opts: rw,uid=500,user,noauto
     - extra_mount_invisible_keys: password=Gvh9DffmxL72DwCgxtUm,user=alex
