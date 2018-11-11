@@ -18,12 +18,14 @@ packages:
 
 newer-emacs:
   pkg.installed:
+    - require: purge-old-emacs
     - fromrepo: stretch-backports
     - refresh: True
-    - name: emacs25
+    - name: emacs
+    - version: 25*
     - allow_updates: True
 
 purge-old-emacs:
   pkg.purged:
-    - pkgs:
-      - emacs24
+    - name: emacs
+    - version: 24*
