@@ -24,7 +24,6 @@ extra-packages:
       - tesseract-langpack-deu
       - python2-reportlab
       - python2-lxml
-      - python2-imaging
       - ghostscript
 
 pip-ocrmypdf:
