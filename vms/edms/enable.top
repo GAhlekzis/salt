@@ -3,4 +3,6 @@ base:
     - vms.edms.qvm
     - vms.edms.use
   fm-edms:
-    - vms.edms.internal
+    - vms.edms.tpl-internal
+  edms-dvm:
+    - vms.edms.disp-internal
