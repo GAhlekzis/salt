@@ -41,7 +41,7 @@ newer-emacs:
 purge-old-emacs:
   pkg.purged:
     - pkgs:
-      - emacs
+      - emacs24
       - emacs24-bin-common
       - emacs24-common
       - emacs24-lucid
