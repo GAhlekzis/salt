@@ -115,7 +115,7 @@ parse-conky:
     - user: alj
     - group: alj
     - mode: 644
-    - source: salt://vms/common/dotfiles/spacemacs.conf
+    - source: salt://vms/common/dotfiles.d/spacemacs.with-init.conf
 
 /home/alj/.emacs.d:
   archive.extracted:
@@ -124,7 +124,7 @@ parse-conky:
     - mode: 644
     - source_hash: sha1=a7448c06f34eb9c091c8d520fdea11641ac6d8d9
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/tars/spacemacs.d.tar
+    - source: salt://vms/common/dotfiles.d/tars/spacemacs.d.tar
     - enforce_toplevel: False
     - trim_output: True
     - overwrite: True
@@ -136,7 +136,7 @@ parse-conky:
     - mode: 644
     - source_hash: sha1=ef65d6c2a8e7df78baa907adbb2cb50bb6ea581b
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/tars/oh-my-zsh.tar
+    - source: salt://vms/common/dotfiles.d/tars/oh-my-zsh.tar
     - enforce_toplevel: False
     - trim_output: True
     - overwrite: True
@@ -148,7 +148,7 @@ parse-conky:
     - mode: 644
     - source_hash: sha1=0f24c196637b883905e6d237d8479d9055ec0481
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/tars/zsh-plugins.tar
+    - source: salt://vms/common/dotfiles.d/tars/zsh-plugins.tar
     - enforce_toplevel: False
     - trim_output: True
     - overwrite: True
@@ -160,7 +160,7 @@ parse-conky:
     - mode: 644
     - source_hash: sha1=585c615af9624b0915a71e2dce062a45027919ee
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/tars/zsh-themes.tar
+    - source: salt://vms/common/dotfiles.d/tars/zsh-themes.tar
     - enforce_toplevel: False
     - trim_output: True
     - overwrite: True
@@ -172,14 +172,10 @@ parse-conky:
     - mode: 644
     - source_hash: sha1=6e193e5e6d8019dd1d26bb69a485b6b2bf5f2c75
     - source_hash_update: True
-    - source: salt://vms/common/dotfiles/tars/tmux.tar
+    - source: salt://vms/common/dotfiles.d/tars/tmux.tar
     - enforce_toplevel: False
     - trim_output: True
     - overwrite: True
-
-/home/alj/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh:
-  file.managed:
-    - source: salt://vms/common/dotfiles/tmux.plugin.zsh
 
 link-tmux-conf:
   file.symlink:
