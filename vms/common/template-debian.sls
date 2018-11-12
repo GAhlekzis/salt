@@ -12,7 +12,6 @@ vm-debian-pkgs:
       - xournal
       - file
       - tlp
-      - emacs
       - tree
       - ipython
 
@@ -28,3 +27,21 @@ new-tmux:
     - name: tmux
     - allow_updates: True
     - version: 2.7*
+
+
+newer-emacs:
+  pkg.installed:
+    - require:
+      - purge-old-emacs
+    - fromrepo: stretch-backports
+    - refresh: True
+    - name: emacs25
+    - allow_updates: True
+
+purge-old-emacs:
+  pkg.purged:
+    - pkgs:
+      - emacs
+      - emacs24-bin-common
+      - emacs24-common
+      - emacs24-lucid
