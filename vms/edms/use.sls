@@ -8,7 +8,7 @@ edms-dvm:
 
 edms-dvm-preferences:
   qvm.prefs:
-    - name edms-dvm
+    - name: edms-dvm
     - template_for_dispvms: True
     - vcpus: 4
 
