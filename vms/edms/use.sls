@@ -11,8 +11,3 @@ edms-dvm-preferences:
     - name: edms-dvm
     - template_for_dispvms: True
     - vcpus: 4
-
-edms:
-  qvm.present:
-    - template: deb9-studium
-    - label: blue
