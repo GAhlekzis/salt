@@ -73,10 +73,6 @@
     - trim_output: True
     - overwrite: True
 
-/home/user/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh:
-  file.managed:
-    - source: salt://vms/common/dotfiles/tmux.plugin.zsh
-
 link-tmux-conf:
   file.symlink:
       - name: /home/user/.tmux.conf
