@@ -5,6 +5,7 @@ edms-dvm:
   qvm.present:
     - template: fm-edms
     - label: gray
+  qvm.prefs:
     - template_for_dispvms: True
     - vcpus: 4
 
