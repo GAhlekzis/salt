@@ -3,5 +3,5 @@
     - user: user
     - group: user
     - mode: 664
-    - source: salt://vms/common/dotfiles/theme.ini
+    - source: salt://vms/common/dotfiles.d/theme.ini
     - makedirs: True
