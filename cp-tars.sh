@@ -2,4 +2,4 @@
 
 MYPATH="vms/common/dotfiles.d"
 
-sudo cp -r ./$MYPATH/tars /srv/salt/$MYPATH
+sudo cp -rf ./$MYPATH/tars /srv/salt/$MYPATH
