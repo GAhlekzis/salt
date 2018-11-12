@@ -5,7 +5,8 @@ CUR_DIR=$(shell pwd)
 all: tmux oh-my-zsh spacemacs
 
 tmux-tar:
-	cd tmux/tmux; tar -cf tmux.tar `ls -A -1`; mv tmux.tar $(CUR_DIR)
+	$(cd tmux/tmux; tar -cf tmux.tar `ls -A -1`; mv tmux.tar $(CUR_DIR))
+	$(cd tmux-plugins; tar -cf tmux-plugins.tar `ls -A -1`; mv tmux-plugins.tar $(CUR_DIR))
 
 oh-my-zsh-tar:
 	$(shell cd oh-my-zsh; tar -cf oh-my-zsh.tar `ls -A -1`; mv oh-my-zsh.tar $(CUR_DIR))
@@ -26,12 +27,16 @@ spacemacs-tar:
 
 tmux: tmux-tar
 	mv tmux.tar $(CUR_DIR)/../tars/
+	mv tmux-plugins.tar $(CUR_DIR)/../tars/
 
 oh-my-zsh: oh-my-zsh-tar
 	mv oh-my-zsh.tar zsh-plugins.tar zsh-themes.tar $(CUR_DIR)/../tars/
 
 spacemacs: spacemacs-tar
 	mv spacemacs.d.tar $(CUR_DIR)/../tars/
+
+checksums:
+	cd $(CUR_DIR)/../tars/; sha1sum * > $(CUR_DIR)/../tars/hashes.sha1
 
 clean:
 	rm $(CUR_DIR)/*.tar
