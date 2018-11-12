@@ -122,7 +122,7 @@ parse-conky:
     - user: alj
     - group: alj
     - mode: 644
-    - source_hash: sha1=8b313b38a33af93830218b8d9c9f8d433421e840
+    - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/spacemacs.d.tar
     - enforce_toplevel: False
@@ -134,7 +134,7 @@ parse-conky:
     - user: alj
     - group: alj
     - mode: 644
-    - source_hash: sha1=c0ffc32a4b90688ede94d87e9f42e8427068fb1a
+    - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/oh-my-zsh.tar
     - enforce_toplevel: False
@@ -146,7 +146,7 @@ parse-conky:
     - user: alj
     - group: alj
     - mode: 644
-    - source_hash: sha1=1f5b420cb58a2e83a924148116b51db2c810f37f
+    - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/zsh-plugins.tar
     - enforce_toplevel: False
@@ -158,7 +158,7 @@ parse-conky:
     - user: alj
     - group: alj
     - mode: 644
-    - source_hash: sha1=f37f1bc5115773f4bc7670d80d5680ad70459bb1
+    - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/zsh-themes.tar
     - enforce_toplevel: False
@@ -170,9 +170,23 @@ parse-conky:
     - user: alj
     - group: alj
     - mode: 644
-    - source_hash: sha1=daa5354380ea3a35a0501dda71012911ddf5767f
+    - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/tmux.tar
+    - enforce_toplevel: False
+    - trim_output: True
+    - overwrite: True
+
+/home/alj/.tmux/plugins:
+  archive.extracted:
+    - require:
+      - id: /home/alj/.tmux
+    - user: alj
+    - group: alj
+    - mode: 644
+    - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
+    - source_hash_update: True
+    - source: salt://vms/common/dotfiles.d/tars/tmux-plugins.tar
     - enforce_toplevel: False
     - trim_output: True
     - overwrite: True

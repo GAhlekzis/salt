@@ -72,6 +72,18 @@
     - trim_output: True
     - overwrite: True
 
+/home/user/.tmux/plugins:
+  archive.extracted:
+    - user: user
+    - group: user
+    - mode: 644
+    - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
+    - source_hash_update: True
+    - source: salt://vms/common/dotfiles.d/tars/tmux-plugins.tar
+    - enforce_toplevel: False
+    - trim_output: True
+    - overwrite: True
+
 link-tmux-conf:
   file.symlink:
       - name: /home/user/.tmux.conf
