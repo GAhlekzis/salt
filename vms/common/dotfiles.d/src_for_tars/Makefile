@@ -2,11 +2,11 @@ CUR_DIR=$(shell pwd)
 
 .PHONY: all tmux oh-my-zsh spacemacs
 
-all: tmux oh-my-zsh spacemacs
+all: tmux oh-my-zsh spacemacs checksums
 
 tmux-tar:
-	$(cd tmux/tmux; tar -cf tmux.tar `ls -A -1`; mv tmux.tar $(CUR_DIR))
-	$(cd tmux-plugins; tar -cf tmux-plugins.tar `ls -A -1`; mv tmux-plugins.tar $(CUR_DIR))
+	$(shell cd tmux/tmux; tar -cf tmux.tar `ls -A -1`; mv tmux.tar $(CUR_DIR))
+	$(shell cd tmux-plugins; tar -cf tmux-plugins.tar `ls -A -1`; mv tmux-plugins.tar $(CUR_DIR))
 
 oh-my-zsh-tar:
 	$(shell cd oh-my-zsh; tar -cf oh-my-zsh.tar `ls -A -1`; mv oh-my-zsh.tar $(CUR_DIR))
