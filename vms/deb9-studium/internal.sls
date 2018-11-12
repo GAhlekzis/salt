@@ -22,8 +22,7 @@ newer-emacs:
       - purge-old-emacs
     - fromrepo: stretch-backports
     - refresh: True
-    - name: emacs
-    - version: 25*
+    - name: emacs25
     - allow_updates: True
 
 purge-old-emacs:
