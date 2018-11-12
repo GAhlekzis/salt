@@ -10,7 +10,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=a7448c06f34eb9c091c8d520fdea11641ac6d8d9
+    - source_hash: sha1=8b313b38a33af93830218b8d9c9f8d433421e840
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/spacemacs.d.tar
     - enforce_toplevel: False
@@ -29,7 +29,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=ef65d6c2a8e7df78baa907adbb2cb50bb6ea581b
+    - source_hash: sha1=c0ffc32a4b90688ede94d87e9f42e8427068fb1a
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/oh-my-zsh.tar
     - enforce_toplevel: False
@@ -41,7 +41,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=0f24c196637b883905e6d237d8479d9055ec0481
+    - source_hash: sha1=1f5b420cb58a2e83a924148116b51db2c810f37f
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/zsh-plugins.tar
     - enforce_toplevel: False
@@ -53,7 +53,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=585c615af9624b0915a71e2dce062a45027919ee
+    - source_hash: sha1=f37f1bc5115773f4bc7670d80d5680ad70459bb1
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/zsh-themes.tar
     - enforce_toplevel: False
@@ -65,7 +65,7 @@
     - user: user
     - group: user
     - mode: 644
-    - source_hash: sha1=c57013d95fd1bb6262f927e26e564ebae92714a6
+    - source_hash: sha1=2f9dace6325c118288b5fc5bc1dc5d4443b02693
     - source_hash_update: True
     - source: salt://vms/common/dotfiles.d/tars/tmux.tar
     - enforce_toplevel: False
