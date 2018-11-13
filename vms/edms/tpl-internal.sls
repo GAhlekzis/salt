@@ -22,7 +22,9 @@ extra-packages:
       - qpdf
       - unpaper
       - tesseract
+      - tesseract-osd
       - tesseract-langpack-deu
       - python2-reportlab
       - python2-lxml
       - ghostscript
+      - evince
