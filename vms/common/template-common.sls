@@ -17,3 +17,13 @@ user:
 /usr/share/applications/spacemacs.desktop:
   file.managed:
     - source: salt://vms/common/dotfiles.d/spacemacs.desktop
+
+my-sync-proxy-socket:
+  file.managed:
+    - name: /etc/systemd/system/my-sync-proxy.socket
+    - source: salt://vms/common/dotfiles.d/my-sync-proxy.socket
+
+my-sync-proxy-service:
+  file.managed:
+    - name: /etc/systemd/system/my-sync-proxy@.service
+    - source: salt://vms/common/dotfiles.d/my-sync-proxy@.service

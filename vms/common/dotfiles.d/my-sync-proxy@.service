@@ -1,0 +1,7 @@
+[Unit]
+Description=Forward connection to Sync Proxy over Qubes RPC
+
+[Service]
+ExecStart=/usr/bin/qrexec-client-vm '' my.Sync
+StandardInput=socket
+StandardOutput=inherit
