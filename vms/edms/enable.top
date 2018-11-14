@@ -6,3 +6,5 @@ base:
     - vms.edms.tpl-internal
   edms-dvm:
     - vms.edms.disp-internal
+  sys-firewall:
+    - vms.edms.firewall-syncthing-proxy
