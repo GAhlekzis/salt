@@ -15,3 +15,4 @@ packages:
       - zsh
       - nautilus
       - xournal
+      - recoll
