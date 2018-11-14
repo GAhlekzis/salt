@@ -34,4 +34,4 @@ enable-sync-proxy-forwarder:
       - target: /etc/systemd/system/my-sync-proxy-forwarder.socket
       - require:
         - id: my-sync-proxy-forwarder-service
-	- id: my-sync-proxy-forwarder-socket
+        - id: my-sync-proxy-forwarder-socket
