@@ -21,7 +21,7 @@ user:
 my-sync-proxy-forwarder-socket:
   file.managed:
     - name: /etc/systemd/system/my-sync-proxy-forwarder.socket
-    - source: salt://vms/edms/my-sync-proxy/my-sync-proxy-forwarder.socket
+    - source: salt://vms/edms/my-sync-proxy/my-sync-proxy-forwarder.sockete
 
 my-sync-proxy-forwarder-service:
   file.managed:
