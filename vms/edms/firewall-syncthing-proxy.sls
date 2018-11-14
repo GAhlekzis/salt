@@ -10,6 +10,7 @@
     - user: user
     - group: user
     - mode: 644
+    - makedirs: True
     - source: salt://vms/edms/my-sync-proxy/my-sync-proxy.service
 
 enable-sync-proxy:
