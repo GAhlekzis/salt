@@ -30,8 +30,13 @@ my-sync-proxy-forwarder-service:
 
 enable-sync-proxy-forwarder:
   file.symlink:
-      - name: /etc/systemd/system/multi-user.target.wants/my-sync-proxy-forwarder.socket
-      - target: /etc/systemd/system/my-sync-proxy-forwarder.socket
-      - require:
-        - id: my-sync-proxy-forwarder-service
-        - id: my-sync-proxy-forwarder-socket
+    - name: /etc/systemd/system/multi-user.target.wants/my-sync-proxy-forwarder.socket
+    - target: /etc/systemd/system/my-sync-proxy-forwarder.socket
+    - require:
+      - id: my-sync-proxy-forwarder-service
+      - id: my-sync-proxy-forwarder-socket
+
+my-Sync-qubes-service:
+  file.managed:
+    - name: /etc/qubes-rpc/my.Sync
+    - source: salt://vms/edms/my-sync-proxy/my.Sync
