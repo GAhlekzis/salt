@@ -17,5 +17,6 @@ enable-sync-proxy:
   file.symlink:
       - name: /home/user/.config/systemd/system/default.target.wants/my-sync-proxy.service
       - target: /home/user/.config/systemd/user/my-sync-proxy.service
-      - require:
+    - makedirs: True
+    - require:
         - id: /home/user/.config/systemd/user/my-sync-proxy.service
