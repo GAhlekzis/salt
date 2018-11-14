@@ -11,3 +11,7 @@ edms-dvm-preferences:
     - name: edms-dvm
     - template_for_dispvms: True
     - vcpus: 4
+
+elms:
+  qvm.service:
+    - my-sync: on
