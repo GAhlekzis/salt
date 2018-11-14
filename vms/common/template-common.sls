@@ -18,12 +18,20 @@ user:
   file.managed:
     - source: salt://vms/common/dotfiles.d/spacemacs.desktop
 
-my-sync-proxy-socket:
+my-sync-proxy-forwarder-socket:
   file.managed:
-    - name: /etc/systemd/system/my-sync-proxy.socket
-    - source: salt://vms/common/dotfiles.d/my-sync-proxy.socket
+    - name: /etc/systemd/system/my-sync-proxy-forwarder.socket
+    - source: salt://vms/edms/my-sync-proxy/my-sync-proxy-forwarder.socket
 
-my-sync-proxy-service:
+my-sync-proxy-forwarder-service:
   file.managed:
-    - name: /etc/systemd/system/my-sync-proxy@.service
-    - source: salt://vms/common/dotfiles.d/my-sync-proxy@.service
+    - name: /etc/systemd/system/my-sync-proxy-forwarder@.service
+    - source: salt://vms/edms/my-sync-proxy/my-sync-proxy-forwarder@.service
+
+enable-sync-proxy-forwarder:
+  file.symlink:
+      - name: /etc/systemd/system/multi-user.target.wants/my-sync-proxy-forwarder.socket
+      - target: /etc/systemd/system/my-sync-proxy-forwarder.socket
+      - require:
+        - id: my-sync-proxy-forwarder-service
+	- id: my-sync-proxy-forwarder-socket

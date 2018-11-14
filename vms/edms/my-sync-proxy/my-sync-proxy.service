@@ -1,0 +1,11 @@
+[Unit]
+Description=My Syncthing Socks Proxy (microsocks)
+After=qubes-iptables.service
+
+[Service]
+ExecStart=/usr/local/bin/microsocks -i 127.0.0.1 -p 8888
+Restart=on-faliure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
