@@ -20,6 +20,8 @@ spacemacs-tar:
 	rm -rf ~/.emacs.d
 	mkdir ~/.emacs.d
 	cd ~/.emacs.d; git clone $(CUR_DIR)/spacemacs .
+	mkdir ~/.emacs.d/lisp;
+	cp $(CUR_DIR)/org-recoll.el ~/.emacs.d/lisp/
 	cp $(CUR_DIR)/../spacemacs.conf ~/.spacemacs
 	emacs25 --insecure -f spacemacs/kill-emacs
 	cd ~/.emacs.d; tar -cf spacemacs.d.tar `ls -A -1`; mv spacemacs.d.tar $(CUR_DIR)
