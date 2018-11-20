@@ -16,3 +16,4 @@ packages:
       - nautilus
       - xournal
       - recoll
+      - aspell-de
