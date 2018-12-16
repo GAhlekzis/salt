@@ -14,3 +14,7 @@ if [ ! -d /srv/salt/.git ]; then
 else
     git pull
 fi
+
+MYPATH="vms/common/dotfiles.d"
+
+cp -rf /home/alj/salt/$MYPATH/tars /srv/salt/$MYPATH
