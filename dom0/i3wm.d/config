@@ -333,9 +333,9 @@ bindsym $mod+r mode "resize"
 #         }
 # }
 
-# bind scratchpad too ü
-bindsym $mod+udiaeresis scratchpad show
-bindsym $mod+Shift+udiaeresis move scratchpad
+# bind scratchpad to p
+bindsym $mod+p scratchpad show
+bindsym $mod+Shift+p move scratchpad
 
 # Make sure all xdg autostart entries are started, this is (among other things)
 # necessary to make sure transient vm's come up
