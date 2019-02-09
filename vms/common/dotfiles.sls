@@ -24,6 +24,13 @@
     - mode: 644
     - source: salt://vms/common/dotfiles.d/zshrc
 
+/home/user/.zprofile:
+  file.managed:
+    - user: user
+    - group: user
+    - mode: 644
+    - source: salt://vms/common/dotfiles.d/zprofile
+
 /home/user/.oh-my-zsh:
   archive.extracted:
     - user: user

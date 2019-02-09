@@ -93,8 +93,9 @@ source $ZSH/oh-my-zsh.sh
   alias e="eframe -n"
 
   export EDITOR="emacsclient -c"
-  export PATH=/home/alj/bin/:$PATH
+
   export GIT_EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -nw"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
