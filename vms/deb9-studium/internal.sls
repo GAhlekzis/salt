@@ -17,3 +17,11 @@ packages:
       - xournal
       - recoll
       - aspell-de
+      - gnucash
+
+syncthing-repo:
+  pkgrepo.managed:
+    - name: deb https://apt.syncthing.net/ syncthing stable
+    - file: /etc/apt/sources.list.d/syncthing.list
+    - key_url: salt://vms/deb9-studium/key.txt
+    - refresh: True
