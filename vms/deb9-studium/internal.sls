@@ -1,5 +1,6 @@
 packages:
   pkg.installed:
+    - require: syncthing-repo
     - pkgs:
       - git
       - auctex
@@ -18,6 +19,7 @@ packages:
       - recoll
       - aspell-de
       - gnucash
+      - syncthing
 
 syncthing-repo:
   pkgrepo.managed:
