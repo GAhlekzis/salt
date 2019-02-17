@@ -1,6 +1,7 @@
 packages:
   pkg.installed:
-    - require: syncthing-repo
+    - require:
+      - syncthing-repo
     - pkgs:
       - git
       - auctex
