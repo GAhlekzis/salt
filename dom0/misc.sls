@@ -79,7 +79,7 @@ set-shell:
   file.managed:
     - user: alj
     - group: alj
-    - mode 640
+    - mode: 640
     - source: salt://dom0/qvm-completion.bash
 
 /home/alj/.preconky:
