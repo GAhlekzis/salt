@@ -75,6 +75,13 @@ set-shell:
     - mode: 640
     - source: salt://dom0/redshift.conf
 
+/home/alj/.config/qvm-completion.bash
+  file.managed:
+    - user: alj
+    - group: alj
+    - mode 640
+    - source: salt://dom0/qvm-completion.bash
+
 /home/alj/.preconky:
   file.managed:
     - user: alj
