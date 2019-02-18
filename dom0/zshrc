@@ -109,9 +109,11 @@ source $ZSH/oh-my-zsh.sh
   alias e="$EMACS_PLUGIN_LAUNCHER -n"
   alias ee="$EMACS_PLUGIN_LAUNCHER --alternate-editor '' -nc"
 
-# redefine ls aliases
-  alias l="ls -lh --color=auto"
-  unalias ll
-  alias ll="ls -alh --color=auto"
-
+# DONT REMOVE! #
 source /etc/profile
+
+# redefine ls aliases
+# (after /etc/profile because there is a script in profile.d overwriting my alias)
+  alias ls="ls -F --color=auto"
+  alias l="ls -lFh --color=auto"
+  alias ll="ls -aFlh --color=auto"
