@@ -1,9 +1,8 @@
 include:
   - .qvm
 
-elms-dvm-create-vm:
+elms-dvm:
   qvm.present:
-    - name: elms-dvm
     - template: deb-elms
     - label: gray
 
