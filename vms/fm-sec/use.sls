@@ -3,8 +3,8 @@ include:
 
 vault:
   qvm.prefs:
-    - template: f28m-sec
+    - template: fm-sec
 
 vera:
   qvm.prefs:
-    - template: f28m-sec
+    - template: fm-sec

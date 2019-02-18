@@ -1,0 +1,6 @@
+base:
+  dom0:
+    - vms.fm-sec.qvm
+    - vms.fm-sec.use
+  fm-sec:
+    - vms.fm-sec.internal
