@@ -90,7 +90,8 @@ source $ZSH/oh-my-zsh.sh
 
 
   alias te="TERM=xterm $EMACS_PLUGIN_LAUNCHER -nw"
-  alias e="eframe -n"
+  alias e="$EMACS_PLUGIN_LAUNCHER -n"
+  alias ee="$EMACS_PLUGIN_LAUNCHER --alternate-editor '' -nc"
 
   export PATH=/home/alj/bin/:$PATH
   export GIT_EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -nw"
