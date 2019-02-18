@@ -21,12 +21,12 @@ user:
 my-sync-proxy-forwarder-socket:
   file.managed:
     - name: /etc/systemd/system/my-sync-proxy-forwarder.socket
-    - source: salt://vms/edms/my-sync-proxy/my-sync-proxy-forwarder.socket
+    - source: salt://vms/elms/my-sync-proxy/my-sync-proxy-forwarder.socket
 
 my-sync-proxy-forwarder-service:
   file.managed:
     - name: /etc/systemd/system/my-sync-proxy-forwarder@.service
-    - source: salt://vms/edms/my-sync-proxy/my-sync-proxy-forwarder@.service
+    - source: salt://vms/elms/my-sync-proxy/my-sync-proxy-forwarder@.service
 
 enable-sync-proxy-forwarder:
   file.symlink:
@@ -39,4 +39,4 @@ enable-sync-proxy-forwarder:
 my-Sync-qubes-service:
   file.managed:
     - name: /etc/qubes-rpc/my.Sync
-    - source: salt://vms/edms/my-sync-proxy/my.Sync
+    - source: salt://vms/elms/my-sync-proxy/my.Sync
