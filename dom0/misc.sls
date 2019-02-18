@@ -102,13 +102,6 @@ parse-conky:
     - name: "perl .conky-parse.perl .preconky > .conkyrc"
     - runas: alj
 
-/home/alj/.emacs:
-  file.managed:
-    - user: alj
-    - group: alj
-    - mode: 644
-    - source: salt://dom0/emacs.conf
-
 /home/alj/.zshrc:
   file.managed:
     - user: alj
