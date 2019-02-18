@@ -1,0 +1,6 @@
+base:
+  dom0:
+    - dom0.i3wm
+    - dom0.misc
+    - dom0.uptodate
+    - dom0.pvgrub
