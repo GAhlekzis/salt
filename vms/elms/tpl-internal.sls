@@ -1,0 +1,21 @@
+elms-packages:
+  pkg.installed:
+    - pkgs:
+      - python3
+      - python3-pip
+      - python2-pip
+      - python2-reportlab
+      - python2-lxml
+      - curl
+      - curlftpfs
+      - ImageMagick
+      - parallel
+      - poppler-utils
+      - qpdf
+      - unpaper
+      - tesseract
+      - tesseract-osd
+      - tesseract-langpack-deu
+      - ghostscript
+      - evince
+      - mu4e

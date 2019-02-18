@@ -1,3 +1,0 @@
-base:
-  sys-firewall:
-    - vms.edms.firewall-syncthing-proxy

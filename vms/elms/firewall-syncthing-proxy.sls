@@ -3,7 +3,7 @@
     - user: root
     - group: root
     - mode: 755
-    - source: salt://vms/edms/my-sync-proxy/microsocks
+    - source: salt://vms/elms/my-sync-proxy/microsocks
 
 /home/user/.config/systemd/user/my-sync-proxy.service:
   file.managed:
@@ -11,7 +11,7 @@
     - group: user
     - mode: 644
     - makedirs: True
-    - source: salt://vms/edms/my-sync-proxy/my-sync-proxy.service
+    - source: salt://vms/elms/my-sync-proxy/my-sync-proxy.service
 
 enable-sync-proxy:
   file.symlink:
