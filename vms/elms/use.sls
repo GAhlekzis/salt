@@ -1,29 +1,20 @@
 include:
   - .qvm
 
-elms-dvm-create-vm:
+elms-dvm:
   qvm.vm:
     - present:
-      - name: elms-dvm
       - template: deb-elms
       - label: gray
-
-elms-dvm-preferences:
-  qvm.vm:
     - prefs:
-      - name: elms-dvm
+      - label: gray
       - template_for_dispvms: True
       - vcpus: 4
 
-elms-create-vm:
+elms:
   qvm-vm:
     - present:
-      - name: elms
       - template: deb-elms
       - label: blue
-
-elms-syncthing-on:
-  qvm.vm:
     - service:
-      - name: elms
       - my-sync: on
