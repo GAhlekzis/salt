@@ -268,9 +268,10 @@ exec --no-startup-id xautolock -detectsleep -time 3 -locker i3lock -c 073642 -no
 # Manually trigger Screenlock:
 bindsym $mod+Escape workspace lock; exec $Locker
 
-set $mode_system System (l) lock, (e) logout, (s) shutdown, (r) reboot
+set $mode_system System (lx) lock, (e) logout, (s) shutdown, (r) reboot
 mode "$mode_system" {
   bindsym l workspace lock; exec --no-startup-id $Locker, mode "default"
+  bindsym x workspace lock; exec --no-startup-id $Locker, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
   bindsym s exec --no-startup-id $Shutdown, mode "default"
   bindsym r exec --no-startup-id $Reboot, mode "default"
