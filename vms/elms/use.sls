@@ -12,9 +12,8 @@ elms-dvm-preferences:
     - template_for_dispvms: True
     - vcpus: 4
 
-elms-create-vm:
+elms:
   qvm-present:
-    - name: elms
     - template: deb-elms
     - label: blue
 
