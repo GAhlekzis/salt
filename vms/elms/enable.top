@@ -1,3 +1,10 @@
 base:
+  dom0:
+    - vms.elms.qvm
+    - vms.elms.use
+  deb-elms:
+    - vms.elms.tpl-internal
+  elms-dvm:
+    - vms.elms.disp-internal
   sys-firewall:
     - vms.elms.firewall-syncthing-proxy
