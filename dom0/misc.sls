@@ -105,7 +105,7 @@ parse-conky:
     - user: alj
     - group: alj
     - mode: 644
-    - source: salt://dom0/zshrc
+    - source: salt://vms/common/dotfiles.d/zshrc
 
 /home/alj/.spacemacs:
   file.managed:
