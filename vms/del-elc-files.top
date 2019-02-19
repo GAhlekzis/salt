@@ -4,4 +4,4 @@
 base:
   dom0:
     - match: nodegroup
-    - vm.del-elc-files
+    - vms.del-elc-files
