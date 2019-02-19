@@ -3,5 +3,5 @@ remove_elc_files:
     - name: file.find
     - path: "~/.emacs.d/elpa"
     - kwargs:
-        iregex: "*.elc"
+        iregex: .*\.elc
         delete: "f"
