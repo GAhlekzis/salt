@@ -104,9 +104,9 @@ source $ZSH/oh-my-zsh.sh
   alias gdl="git branch | grep -v "master" | xargs git branch -D"
 
 # ipython instead of python
-  alias pi=pi3
-  alias pi2="ipython --no-confirm-exit"
-  alias pi3="ipython3 --no-confirm-exit"
+  alias py=py3
+  alias py2="ipython --no-confirm-exit"
+  alias py3="ipython3 --no-confirm-exit"
 
 # editor aliases
   alias te="TERM=xterm $EMACS_PLUGIN_LAUNCHER -nw"
