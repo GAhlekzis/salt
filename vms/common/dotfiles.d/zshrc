@@ -94,6 +94,8 @@ source $ZSH/oh-my-zsh.sh
   export EDITOR="$EMACS_PLUGIN_LAUNCHER -nc"
   export GIT_EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -nw"
 
+  export KEYTIMEOUT=1
+
 # You may need to manually set your language environment
   export LANG=en_US.UTF-8
 
