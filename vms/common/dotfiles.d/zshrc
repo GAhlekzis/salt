@@ -91,8 +91,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### EXPORTS ###
   export PATH=~/bin/:$PATH
-  export VISUAL="$EMACS_PLUGIN_LAUNCHER -n"
-  export EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
+  export VISUAL="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
   export GIT_EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
 
   export KEYTIMEOUT=1
