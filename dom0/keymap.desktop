@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=Apply Keymap
+GenericName=Apply Keymap
+Categories=Utility
+Exec=xkbcomp -w 3 $HOME/.keymap.xkb $DISPLAY

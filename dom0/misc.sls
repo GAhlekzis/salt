@@ -1,3 +1,5 @@
+{% set username = 'alj' %}
+
 misc-packages:
   pkg.installed:
     - pkgs:
@@ -20,15 +22,15 @@ misc-packages:
       - borgbackup
       - fuse-sshfs
 
-/home/alj/.fonts:
+/home/{{ username }}/.fonts:
   file.directory:
     - mode: 775
     - order: 1
 
-/home/alj/.fonts/SauceCodePro_Nerd.ttf:
+/home/{{ username }}/.fonts/SauceCodePro_Nerd.ttf:
   file.managed:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 775
     - order: 2
     - source: salt://vms/common/font/SauceCodePro_Nerd.ttf
@@ -36,7 +38,7 @@ misc-packages:
 font-cache:
   cmd.run:
     - name: fc-cache -f
-    - runas: alj
+    - runas: {{ username }}
     - order: 3
 
 install-st:
@@ -63,61 +65,82 @@ uptodate-dom0:
 
 set-shell:
   user.present:
-    - name: alj
+    - name: {{ username }}
     - shell: /usr/bin/zsh
 
-/home/alj/.config/redshift.conf:
+xkbmap-copy:
   file.managed:
-    - user: alj
-    - group: alj
+    - name: /home/{{ username }}/.keymap.xkb
+    - user: {{ username }}
+    - group: {{ username }}
+    - mode: 640
+    - source: salt://dom0/keymap.xkb
+
+xkbcomp-desktop-file:
+  file.managed:
+    - name /home/{{ username }}/.local/share/applications/keymap.desktop
+    - user: {{ username }}
+    - group: {{ username }}
+    - mode: 640
+    - source: salt://dom0/keymap.desktop
+
+xkbcomp-link-autostart:
+  file.symlink:
+    - name: /home/{{ username }}/.local/share/applications/keymap.desktop
+    - target: /home/{{ username }}/.config/autostart/keymap.desktop
+
+/home/{{ username }}/.config/redshift.conf:
+  file.managed:
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 640
     - source: salt://dom0/redshift.conf
 
-/home/alj/.config/qvm-completion.bash:
+/home/{{ username }}/.config/qvm-completion.bash:
   file.managed:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 640
     - source: salt://dom0/qvm-completion.bash
 
-/home/alj/.preconky:
+/home/{{ username }}/.preconky:
   file.managed:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 640
     - source: salt://dom0/conky.conf
 
-/home/alj/.conky-parse.perl:
+/home/{{ username }}/.conky-parse.perl:
   file.managed:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 755
     - source: salt://dom0/conky-parse.perl
 
 parse-conky:
   cmd.run:
-    - cwd: /home/alj
+    - cwd: /home/{{ username }}
     - name: "perl .conky-parse.perl .preconky > .conkyrc"
-    - runas: alj
+    - runas: {{ username }}
 
-/home/alj/.zshrc:
+/home/{{ username }}/.zshrc:
   file.managed:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source: salt://vms/common/dotfiles.d/zshrc
 
-/home/alj/.spacemacs:
+/home/{{ username }}/.spacemacs:
   file.managed:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source: salt://vms/common/dotfiles.d/spacemacs.with-init.conf
 
-/home/alj/.emacs.d:
+/home/{{ username }}/.emacs.d:
   archive.extracted:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
@@ -126,10 +149,10 @@ parse-conky:
     - trim_output: True
     - overwrite: True
 
-/home/alj/.oh-my-zsh:
+/home/{{ username }}/.oh-my-zsh:
   archive.extracted:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
@@ -138,10 +161,10 @@ parse-conky:
     - trim_output: True
     - overwrite: True
 
-/home/alj/.oh-my-zsh/custom/plugins/:
+/home/{{ username }}/.oh-my-zsh/custom/plugins/:
   archive.extracted:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
@@ -150,10 +173,10 @@ parse-conky:
     - trim_output: True
     - overwrite: True
 
-/home/alj/.oh-my-zsh/custom/themes/:
+/home/{{ username }}/.oh-my-zsh/custom/themes/:
   archive.extracted:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
@@ -162,10 +185,10 @@ parse-conky:
     - trim_output: True
     - overwrite: True
 
-/home/alj/.tmux:
+/home/{{ username }}/.tmux:
   archive.extracted:
-    - user: alj
-    - group: alj
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
@@ -174,12 +197,12 @@ parse-conky:
     - trim_output: True
     - overwrite: True
 
-/home/alj/.tmux/plugins:
+/home/{{ username }}/.tmux/plugins:
   archive.extracted:
     - require:
-      - id: /home/alj/.tmux
-    - user: alj
-    - group: alj
+      - id: /home/{{ username }}/.tmux
+    - user: {{ username }}
+    - group: {{ username }}
     - mode: 644
     - source_hash: salt://vms/common/dotfiles.d/tars/hashes.sha1
     - source_hash_update: True
@@ -190,6 +213,6 @@ parse-conky:
 
 link-tmux-conf:
   file.symlink:
-      - name: /home/alj/.tmux.conf
-      - target: /home/alj/.tmux/tmux.conf
+      - name: /home/{{ username }}/.tmux.conf
+      - target: /home/{{ username }}/.tmux/tmux.conf
       - order: last
