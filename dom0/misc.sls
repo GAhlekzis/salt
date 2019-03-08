@@ -78,7 +78,7 @@ xkbmap-copy:
 
 xkbcomp-desktop-file:
   file.managed:
-    - name /home/{{ username }}/.local/share/applications/keymap.desktop
+    - name: /home/{{ username }}/.local/share/applications/keymap.desktop
     - user: {{ username }}
     - group: {{ username }}
     - mode: 640
