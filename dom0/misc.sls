@@ -86,8 +86,8 @@ xkbcomp-desktop-file:
 
 xkbcomp-link-autostart:
   file.symlink:
-    - name: /home/{{ username }}/.local/share/applications/keymap.desktop
-    - target: /home/{{ username }}/.config/autostart/keymap.desktop
+    - name: /home/{{ username }}/.config/autostart/keymap.desktop
+    - target: /home/{{ username }}/.local/share/applications/keymap.desktop
 
 /home/{{ username }}/.config/redshift.conf:
   file.managed:
