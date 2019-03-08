@@ -13,7 +13,7 @@
   ZSH_THEME="powerlevel9k/powerlevel9k"
   POWERLEVEL9K_MODE='nerdfont-complete'
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history)
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode root_indicator background_jobs history)
 
 # START TMUX AUTOMATICALLY
   ZSH_TMUX_AUTOSTART='true'
@@ -73,6 +73,7 @@ plugins=(
     emacs
     zsh-autosuggestions
     zsh-syntax-highlighting
+    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
