@@ -1,1 +1,1 @@
-ssh-agent $(ssh-add ~/salt/SSH-PRIVATE.key; git push)
+ssh-agent $(ssh-add ./SSH-PRIVATE.key; git push)
