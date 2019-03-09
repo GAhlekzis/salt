@@ -82,41 +82,52 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 #################################################################
 
-### Qubes Autocomplete (from Bash) ###
+  ### Qubes Autocomplete (from Bash) ###
   if command -v qvm-ls --no-spinner > /dev/null 2>&1; then
       autoload -U bashcompinit
       bashcompinit
       source ~/.config/qvm-completion.bash
   fi
 
-### EXPORTS ###
+  ### MISC ###
+  emacs-command-line () {
+      local VISUAL="$EMACS_PLUGIN_LAUNCHER -t"
+      local EDITOR="$EMACS_PLUGIN_LAUNCHER -t"
+      TERM=xterm edit-command-line
+  }
+  zle -N emacs-command-line
+  bindkey -M vicmd 'v' emacs-command-line
+  bindkey -M vicmd 'e' emacs-command-line
+
+  ### EXPORTS ###
   export PATH=~/bin/:$PATH
-  export VISUAL="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
-  export GIT_EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
+  export VISUAL="$EMACS_PLUGIN_LAUNCHER -n"
+  export EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
+  export GIT_EDITOR=$EDITOR
 
   export KEYTIMEOUT=1
 
-# You may need to manually set your language environment
+  # You may need to manually set your language environment
   export LANG=en_US.UTF-8
 
-### ALIASES ###
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+  ### ALIASES ###
+  # alias zshconfig="mate ~/.zshrc"
+  # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# delete all local branches
+  # delete all local branches
   alias gdl="git branch | grep -v "master" | xargs git branch -D"
 
-# ipython instead of python
+  # ipython instead of python
   alias py=py3
   alias py2="ipython --no-confirm-exit"
   alias py3="ipython3 --no-confirm-exit"
 
-# editor aliases
+  # editor aliases
   alias te="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
   alias e="$EMACS_PLUGIN_LAUNCHER -n"
   alias ee="$EMACS_PLUGIN_LAUNCHER --alternate-editor '' -nc"
 
-# Salt Commands for Qubes
+  # Salt Commands for Qubes
   if command -v qubesctl > /dev/null 2>&1; then
       alias saltall="sudo qubesctl --show-output \
              --force-color --max-concurrency 4 --all state.highstate"
@@ -133,11 +144,11 @@ source $ZSH/oh-my-zsh.sh
       }
   fi
 
-# DONT REMOVE! #
-source /etc/profile
+  # DONT REMOVE! #
+  source /etc/profile
 
-# redefine ls aliases
-# (after /etc/profile because there is a script in profile.d overwriting my alias)
+  # redefine ls aliases
+  # (after /etc/profile because there is a script in profile.d overwriting my alias)
   alias ls="ls -F --color=auto"
   alias l="ls -lFh --color=auto"
   alias ll="ls -aFlh --color=auto"
