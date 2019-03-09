@@ -99,6 +99,9 @@ source $ZSH/oh-my-zsh.sh
   bindkey -M vicmd 'v' emacs-command-line
   bindkey -M vicmd 'e' emacs-command-line
 
+  # Force user to type exit or logout to exit shell
+  setopt ignoreeof
+
   ### EXPORTS ###
   export PATH=~/bin/:$PATH
   export VISUAL="$EMACS_PLUGIN_LAUNCHER -n"
