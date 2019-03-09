@@ -102,6 +102,9 @@ source $ZSH/oh-my-zsh.sh
   # Force user to type exit or logout to exit shell
   setopt ignoreeof
 
+  # use C-s to sudofy the current (or previous) commandline
+  bindkey '^s' sudo-command-line
+
   ### EXPORTS ###
   export PATH=~/bin/:$PATH
   export VISUAL="$EMACS_PLUGIN_LAUNCHER -n"
