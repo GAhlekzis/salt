@@ -102,8 +102,14 @@ source $ZSH/oh-my-zsh.sh
   # Force user to type exit or logout to exit shell
   setopt ignoreeof
 
-  # use C-s to sudofy the current (or previous) commandline
-  bindkey '^s' sudo-command-line
+  # sudofy the current (or previous) commandline
+  bindkey '^x' sudo-command-line
+
+  # use backtab to move backwards in zsh menues
+  bindkey '^[[Z' reverse-menu-complete
+
+  # disable flow control
+  stty -ixon -ixoff
 
   ### EXPORTS ###
   export PATH=~/bin/:$PATH
