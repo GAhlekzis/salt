@@ -9,5 +9,10 @@ packages:
       - oathtool
       - xclip
       - qmasterpassword
-      - keepassx
+      - keepassxc
       - bzip2
+
+# purge-packages:
+#   pkg.purged:
+#     - pkgs:
+#       - keepassx
