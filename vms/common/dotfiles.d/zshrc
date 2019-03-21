@@ -17,7 +17,7 @@
 
 # START TMUX AUTOMATICALLY
   ZSH_TMUX_AUTOSTART='true'
-  export TERM="st-256color"
+  [[ $TMUX != "" ]] && export TERM="screen-256color"
 
 # set indent after starting tmux
   export ZLE_RPROMPT_INDENT=0
@@ -112,7 +112,6 @@ source $ZSH/oh-my-zsh.sh
   stty -ixon -ixoff
 
   ### EXPORTS ###
-  export PATH=~/bin/:$PATH
   export VISUAL="$EMACS_PLUGIN_LAUNCHER -n"
   export EDITOR="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"
   export GIT_EDITOR=$EDITOR
@@ -123,8 +122,6 @@ source $ZSH/oh-my-zsh.sh
   export LANG=en_US.UTF-8
 
   ### ALIASES ###
-  # alias zshconfig="mate ~/.zshrc"
-  # alias ohmyzsh="mate ~/.oh-my-zsh"
 
   # delete all local branches
   alias gdl="git branch | grep -v "master" | xargs git branch -D"
@@ -156,11 +153,7 @@ source $ZSH/oh-my-zsh.sh
       }
   fi
 
-  # DONT REMOVE! #
-  source /etc/profile
-
   # redefine ls aliases
-  # (after /etc/profile because there is a script in profile.d overwriting my alias)
   alias ls="ls -F --color=auto"
   alias l="ls -lFh --color=auto"
   alias ll="ls -aFlh --color=auto"
