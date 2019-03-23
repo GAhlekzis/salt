@@ -1,5 +1,5 @@
 _qvm-run() {
-    local app_vms 
+    local app_vms
     app_vms=( $(qvm-ls --raw-list|grep -v "^dom0$") )
 
     local exc=
@@ -48,7 +48,7 @@ _qvm-ls(){
 
 _qvm-shutdown() {
     local app_vms
-    app_vms=( $(qvm-ls |grep '* |'|cut -d'|' -f 1|tr -d " {}[]<>=") )
+    app_vms=( $(qvm-ls --raw-data |grep 'Running'|cut -d'|' -f 1|tr -d " {}[]<>=") )
 
     local exc=
     if (( words[(I)--all] )); then
@@ -111,7 +111,7 @@ _qvm-backup(){
 }
 
 _qvm-clone(){
-    local app_vms 
+    local app_vms
     app_vms=( $(qvm-ls |grep 'Halted |'|cut -d'|' -f 1|tr -d " {}[]<>=") )
     _arguments : '(- *)'{-h,--help}'[show help message and exit]'\
         '--force-root[Force to run, even with root privileges]'\
@@ -119,7 +119,7 @@ _qvm-clone(){
         '(-p --path=)'{-p,--path=}'[Specify path to the template directory]:dirs:_directories'\
         "1:Halted VMs:($app_vms)";
         ;
-        
+
 }
 
 
