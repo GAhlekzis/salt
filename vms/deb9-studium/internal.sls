@@ -21,6 +21,9 @@ packages:
       - aspell-de
       - gnucash
       - syncthing
+      - libqt5widgets5
+      - libqt5network5
+      - libqt5svg5
 
 syncthing-repo:
   pkgrepo.managed:
