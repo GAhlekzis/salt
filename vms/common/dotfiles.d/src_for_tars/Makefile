@@ -13,7 +13,7 @@ oh-my-zsh-tar:
 	tar -cf $(CUR_DIR)/zsh-plugins.tar zsh-autosuggestions zsh-syntax-highlighting && \
 	tar -cf $(CUR_DIR)/zsh-themes.tar powerlevel9k
 
-spacemacs-tar:
+spacemacs-part-one:
 	$(shell killall emacs)
 	rm -rf ~/.spacemacs
 	rm -rf ~/.emacs
@@ -23,7 +23,10 @@ spacemacs-tar:
 	mkdir ~/.emacs.d/lisp;
 	cp $(CUR_DIR)/org-recoll.el ~/.emacs.d/lisp/
 	cp $(CUR_DIR)/../spacemacs.conf ~/.spacemacs
-	emacs25 --insecure -f spacemacs/kill-emacs
+	emacs25 --insecure
+	echo "Please close emacs after building of pdftools is done and run part two!"
+
+spacemacs-part-two:
 	cd ~/.emacs.d; tar -cf spacemacs.d.tar `ls -A -1`; mv spacemacs.d.tar $(CUR_DIR)
 	cp ~/.spacemacs $(CUR_DIR)/../spacemacs.with-init.conf
 
@@ -34,7 +37,8 @@ tmux: tmux-tar
 oh-my-zsh: oh-my-zsh-tar
 	mv oh-my-zsh.tar zsh-plugins.tar zsh-themes.tar $(CUR_DIR)/../tars/
 
-spacemacs: spacemacs-tar
+spacemacs:
+	test -e spacemacs.d.tar || { echo "Please run spacemacs part one and two first!"; exit 1; }
 	mv spacemacs.d.tar $(CUR_DIR)/../tars/
 
 checksums:
