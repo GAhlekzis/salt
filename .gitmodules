@@ -1,0 +1,33 @@
+[submodule "vms/common/dotfiles.d/src_for_tars/oh-my-zsh"]
+	path = vms/common/dotfiles.d/src_for_tars/oh-my-zsh
+	url = git@github.com:GAhlekzis/oh-my-zsh.git
+[submodule "vms/common/dotfiles.d/src_for_tars/powerlevel9k"]
+	path = vms/common/dotfiles.d/src_for_tars/powerlevel9k
+	url = git@github.com:GAhlekzis/powerlevel9k.git
+[submodule "vms/common/dotfiles.d/src_for_tars/spacemacs"]
+	path = vms/common/dotfiles.d/src_for_tars/spacemacs
+	url = https://github.com/syl20bnr/spacemacs.git
+[submodule "vms/common/dotfiles.d/src_for_tars/tmux"]
+	path = vms/common/dotfiles.d/src_for_tars/tmux
+	url = git@github.com:GAhlekzis/tmux-config.git
+[submodule "vms/common/dotfiles.d/src_for_tars/zsh-autosuggestions"]
+	path = vms/common/dotfiles.d/src_for_tars/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-copycat"]
+	path = vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-copycat
+	url = "https://git::@github.com/tmux-plugins/tmux-copycat "
+[submodule "vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-open"]
+	path = vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-open
+	url = "https://git::@github.com/tmux-plugins/tmux-open "
+[submodule "vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-plugin-sysstat"]
+	path = vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-plugin-sysstat
+	url = "https://git::@github.com/samoshkin/tmux-plugin-sysstat "
+[submodule "vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-prefix-highlight"]
+	path = vms/common/dotfiles.d/src_for_tars/tmux-plugins/tmux-prefix-highlight
+	url = "https://git::@github.com/tmux-plugins/tmux-prefix-highlight "
+[submodule "vms/common/dotfiles.d/src_for_tars/tmux-plugins/tpm"]
+	path = vms/common/dotfiles.d/src_for_tars/tmux-plugins/tpm
+	url = "https://github.com/tmux-plugins/tpm "
+[submodule "vms/common/dotfiles.d/src_for_tars/zsh-syntax-highlighting"]
+	path = vms/common/dotfiles.d/src_for_tars/zsh-syntax-highlighting
+	url = "https://github.com/zsh-users/zsh-syntax-highlighting.git "
