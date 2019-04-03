@@ -74,6 +74,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     vi-mode
+    globalias
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,7 +104,8 @@ source $ZSH/oh-my-zsh.sh
   setopt ignoreeof
 
   # sudofy the current (or previous) commandline
-  bindkey '^x' sudo-command-line
+  bindkey '^x^x' sudo-command-line
+  bindkey -M vicmd '^x^x' sudo-command-line
 
   # use backtab to move backwards in zsh menues
   bindkey '^[[Z' reverse-menu-complete
@@ -127,9 +129,14 @@ source $ZSH/oh-my-zsh.sh
   alias gdl="git branch | grep -v "master" | xargs git branch -D"
 
   # ipython instead of python
-  alias py=py3
   alias py2="ipython --no-confirm-exit"
   alias py3="ipython3 --no-confirm-exit"
+  if [ -x "$(command -v ipython3)" ];
+  then
+      alias py=py3
+  else
+      alias py=py2
+  fi
 
   # editor aliases
   alias te="TERM=xterm $EMACS_PLUGIN_LAUNCHER -t"

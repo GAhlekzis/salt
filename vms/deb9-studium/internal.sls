@@ -21,6 +21,7 @@ packages:
       - aspell-de
       - gnucash
       - syncthing
+      - mu4e
       - libqt5widgets5
       - libqt5network5
       - libqt5svg5

@@ -14,6 +14,7 @@ vm-debian-pkgs:
       - tlp
       - tree
       - ipython
+      - ipython3
 
 stretch-backports:
   pkgrepo.managed:
